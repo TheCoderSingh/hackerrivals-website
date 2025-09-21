@@ -1,1 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
 @import 'tailwindcss';
+
+@theme {
+  /* --color-primary: #121417e6; */
+  --color-primary: 195 100% 50%;
+  --color-secondary: 120 100% 55%;
+  --color-accent: 280 100% 60%;
+
+  --color-background: 220 13% 8%;
+  --color-foreground: 210 40% 98%;
+  --color-border: 220 13% 20%;
+
+  --color-primary-foreground: 220 13% 8%;
+
+  --color-card: 220 13% 10%;
+
+  --font-heading: 'Orbitron', monospace;
+  --font-body: 'Rajdhani', sans-serif;
+
+  --animation-pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+body {
+  background-color: hsl(var(--color-background));
+  color: hsl(var(--color-foreground));
+}
+
+* {
+  border-color: hsl(var(--color-border));
+}
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    text-shadow:
+      0 0 5px hsl(var(--color-primary) / 0.5),
+      0 0 10px hsl(var(--color-primary) / 0.3);
+  }
+  50% {
+    text-shadow:
+      0 0 20px hsl(var(--color-primary) / 0.8),
+      0 0 30px hsl(var(--color-primary) / 0.5),
+      0 0 40px hsl(var(--color-primary) / 0.3);
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-glow-pulse {
+  animation: 2s ease-in-out 0s infinite normal none running glow-pulse;
+  background: linear-gradient(to right, hsl(195 100% 50%), hsl(280 100% 60%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 10px hsl(195 100% 50% / 0.3));
+}
+
+.animate-slide-up {
+  animation: slide-up 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.text-glow {
+  color: transparent;
+  background-image: linear-gradient(
+    to right,
+    hsl(var(--color-primary)),
+    hsl(var(--color-secondary)),
+    hsl(var(--color-accent))
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 15px hsl(var(--color-primary) / 0.5));
+}
+
+.btn-neon {
+  background: linear-gradient(to right, hsl(var(--color-primary)), hsl(var(--color-accent)));
+  color: hsl(var(--color-primary-foreground));
+  border: 1px solid hsl(var(--color-primary));
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px hsl(var(--color-primary) / 0.5);
+}
+
+.btn-neon:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px hsl(var(--color-primary) / 0.8);
+}
