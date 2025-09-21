@@ -11,9 +11,9 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16 md:h-20">
           {/* Logo */}
           <div>
-            <h1 className="font-heading animate-glow-pulse text-glow text-lg font-bold">
+            <a className="font-heading animate-glow-pulse text-glow text-lg font-bold" href="#home">
               HACKERRIVALS
-            </h1>
+            </a>
           </div>
 
           {/* Desktop Navigation */}
