@@ -17,12 +17,12 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
+          <div className="hidden md:flex items-center space-x-6 lg:space-x-8 uppercase">
             {navItems.map((item, index) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="transition-all duration-300 transform hover:scale-105 relative group font-body text-sm lg:text-base text-foreground hover:text-primary"
+                className="transition-all duration-300 transform hover:scale-105 relative group font-nav text-sm text-foreground hover:text-primary"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {item.name}
@@ -50,7 +50,7 @@ const Navbar = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="font-body font-medium text-foreground hover:text-primary transition-all duration-300 py-2 px-2 rounded hover:bg-card animate-fade-in"
+                  className="font-nav font-medium text-foreground hover:text-primary transition-all duration-300 py-2 px-2 rounded hover:bg-card animate-fade-in"
                   style={{ animationDelay: `${index * 0.1}s` }}
                   onClick={() => setIsOpen(false)}
                 >

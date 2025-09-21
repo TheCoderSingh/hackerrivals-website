@@ -1,0 +1,68 @@
+import { Clock, CoffeeCup, Flash, Group, Medal1st, Presentation } from 'iconoir-react';
+
+export const scheduleItems = [
+  {
+    time: '9:00 AM',
+    title: 'Registration & Check-in',
+    description: 'Welcome, team verification, and swag pickup',
+    icon: Group,
+    color: 'text-primary',
+    bgColor: 'bg-primary/10',
+  },
+  {
+    time: '10:00 AM',
+    title: 'Opening Ceremony',
+    description: 'Rules explanation, sponsor intros, and theme reveal',
+    icon: Flash,
+    color: 'text-secondary',
+    bgColor: 'bg-secondary/10',
+  },
+  {
+    time: '10:30 AM',
+    title: 'Hacking Begins',
+    description: 'Teams start building their amazing projects',
+    icon: Clock,
+    color: 'text-accent',
+    bgColor: 'bg-accent/10',
+  },
+  {
+    time: '12:30 PM',
+    title: 'Lunch Break',
+    description: 'Fuel up with sponsored meals and networking',
+    icon: CoffeeCup,
+    color: 'text-primary',
+    bgColor: 'bg-primary/10',
+  },
+  {
+    time: '2:00 PM',
+    title: 'Mid-Event Check',
+    description: 'Progress updates and mentor consultations',
+    icon: Flash,
+    color: 'text-secondary',
+    bgColor: 'bg-secondary/10',
+  },
+  {
+    time: '4:00 PM',
+    title: 'Final Sprint',
+    description: 'Last 2 hours - polish and prepare presentations',
+    icon: Clock,
+    color: 'text-accent',
+    bgColor: 'bg-accent/10',
+  },
+  {
+    time: '6:00 PM',
+    title: 'Presentations',
+    description: 'Teams showcase their creations (3 min each)',
+    icon: Presentation,
+    color: 'text-primary',
+    bgColor: 'bg-primary/10',
+  },
+  {
+    time: '7:30 PM',
+    title: 'Awards Ceremony',
+    description: 'Winner announcement and prize distribution',
+    icon: Medal1st,
+    color: 'text-secondary',
+    bgColor: 'bg-secondary/10',
+  },
+];

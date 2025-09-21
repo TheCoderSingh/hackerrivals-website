@@ -2,6 +2,7 @@ import { IconoirProvider } from 'iconoir-react';
 import './App.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import Schedule from './components/Schedule';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
 
       <main>
         <Hero />
+        <Schedule />
       </main>
     </IconoirProvider>
   );
