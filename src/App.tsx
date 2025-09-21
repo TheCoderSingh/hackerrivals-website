@@ -2,7 +2,9 @@ import { IconoirProvider } from 'iconoir-react';
 import './App.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import ESportsSection from './components/ESportsSection';
 import Schedule from './components/Schedule';
+import VenueInfo from './components/VenueInfo';
 import Register from './components/Register';
 import Sponsors from './components/Sponsors';
 import FAQ from './components/FAQ';
@@ -17,7 +19,9 @@ function App() {
 
       <main>
         <Hero />
+        <ESportsSection />
         <Schedule />
+        <VenueInfo />
         <Register />
         <Sponsors />
         <FAQ />

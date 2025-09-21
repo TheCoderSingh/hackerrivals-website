@@ -3,7 +3,7 @@ import Countdown from '../Countdown';
 const Hero = () => {
   return (
     <section
-      className="h-screen flex flex-col items-center justify-center overflow-hidden"
+      className="min-h-screen flex flex-col items-center justify-center overflow-hidden"
       id="home"
     >
       {/* Background Image */}
@@ -29,7 +29,7 @@ const Hero = () => {
           <h1 className="font-heading font-black text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-8xl text-glow leading-tight">
             HACKER
           </h1>
-          <h1 className="block text-primary animate-pulse font-heading font-black text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-8xl text-glow leading-tight">
+          <h1 className="block text-primary animate-pulse font-heading font-black text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-8xl text-glow leading-tight md:-mt-8">
             RIVALS
           </h1>
         </div>
@@ -37,9 +37,12 @@ const Hero = () => {
 
       {/* Tagline */}
       <div className="mb-6 animate-fade-in delay-200">
-        <p className="font-body text-lg sm:text-xl md:text-2xl lg:text-3xl font-light text-foreground/90 max-w-4xl mx-auto leading-relaxed">
+        <p className="font-body text-lg sm:text-xl md:text-2xl lg:text-3xl font-light text-foreground/90 max-w-4xl mx-auto leading-relaxed text-center">
+          World's First{' '}
+          <span className="text-neon font-semibold animate-pulse">eSports Hackathon</span>
+          <br />
           Shorter, smarter, and designed for{' '}
-          <span className="text-neon font-semibold animate-pulse">spectators</span>
+          <span className="text-primary font-semibold">spectators</span>
         </p>
       </div>
 
@@ -50,7 +53,10 @@ const Hero = () => {
             October 25, 2025
           </p>
           <p className="font-body text-sm md:text-base text-muted-foreground text-center">
-            In-Person Event
+            BCIT Downtown Campus • 10am-5pm
+          </p>
+          <p className="font-body text-xs md:text-sm text-accent text-center mt-1">
+            + VIP After Party @ AWS Building
           </p>
         </div>
       </div>

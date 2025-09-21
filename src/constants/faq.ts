@@ -1,52 +1,62 @@
 export const faqItems = [
   {
-    question: 'Who can participate in HackerRivals?',
+    question: 'What makes this different from a traditional hackathon?',
     answer:
-      'Anyone with a passion for coding and innovation! We welcome developers of all skill levels, from beginners to experts. Teams can have 1-5 members, and you can register as a solo participant or with a team.',
+      "Hacker Rivals is the world's first eSports hackathon! We've revolutionized the traditional hackathon format by designing it specifically for spectators with live audience engagement, professional entertainment, and a fast-paced 3-hour competition. Think competitive gaming tournament meets innovation challenge - complete with professional MC, cheerleaders, mascots, and real-time audience voting.",
   },
   {
-    question: 'How do I register for the event?',
+    question: 'How does the eSports competition format work?',
     answer:
-      'Simply fill out the registration form on this page with your details and team information. Registration is free, but spots are limited, so register early to secure your place!',
+      'Our lightning-fast format has three electrifying rounds: Round 1 - Concept Presentation (12:30 PM, Level 2 Stage) where teams pitch to judges and live audience; Round 2 - MVP Knockout (2:15 PM, Level 2 Stage) - an intense elimination where only 2 teams advance; Round 3 - Championship Final (4:00 PM, Main Stage) with polished presentations, live demos, and the ultimate showdown for $1,000 cash!',
   },
   {
-    question: 'What should I bring to the hackathon?',
+    question: 'How can the audience participate in the competition?',
     answer:
-      "Bring your laptop, chargers, any development tools you prefer, and your creativity! We'll provide food, drinks, WiFi, and workspace. Don't forget a positive attitude and willingness to learn!",
+      'Audiences are integral to the experience! Vote as the 3rd judge via QR codes, choose "whammys" (fun challenges for contestants), submit and vote on AI-generated event music, and watch real-time stats and leaderboards on massive screens. The audience literally helps decide who wins - it\'s not just watching, it\'s participating!',
   },
   {
-    question: 'What are the prizes?',
+    question: 'Who can participate and how do teams qualify?',
     answer:
-      "The winning team will receive $1000 in cash plus our exclusive POP trophy. We also have special recognition for categories like 'Most Creative Solution' and 'Best Team Spirit'.",
+      'Teams of 1-5 members can apply, but everyone goes through our comprehensive screening process including technical assessment and personality evaluation. We need contestants who are not only skilled developers but also engaging entertainers who can thrive under the spotlight and audience pressure.',
   },
   {
-    question: 'Will there be mentors available?',
+    question: 'What are the technology requirements and sponsor integrations?',
     answer:
-      'Yes! Industry experts and experienced developers will be available throughout the event to provide guidance, answer technical questions, and help you overcome challenges.',
+      "You'll receive AWS credits and a pre-configured development environment. Sponsor technologies like Couchbase are integrated into challenges with bonus points for creative usage. Pre-event education sessions and office hours help you master these tools. Remember: all coding happens live during the event!",
   },
   {
-    question: "What if I don't have a team?",
+    question: 'What entertainment elements can spectators expect?',
     answer:
-      "No problem! You can register as a solo participant, or we'll help you find teammates during the opening ceremony. Many great teams are formed at the event itself!",
+      "This is a full production experience! Professional MC with coding knowledge, cosplay-themed cheerleaders and mascot, big screen displays with real-time stats and voting, professional livestreaming, and interactive audience experiences throughout. It's designed to be as exciting as watching your favorite eSports tournament.",
   },
   {
-    question: 'Are there any technology restrictions?',
+    question: 'What are the prizes and recognition?',
     answer:
-      "You're free to use any programming languages, frameworks, or tools you're comfortable with. The goal is to build something amazing, so use whatever helps you achieve that!",
+      'Winners receive $1,000 in cash delivered dramatically in a suitcase of $5 bills! Plus sponsor credits, premium swag, custom Funko Pop awards, and VIP recognition at our exclusive rooftop after-party. All participants get networking opportunities, memorable experiences, and bragging rights as pioneers of eSports hackathons.',
   },
   {
-    question: 'Is food provided?',
+    question: 'Where exactly is the event located?',
     answer:
-      "Absolutely! We'll provide breakfast, lunch, dinner, and snacks throughout the day. We'll also have dietary restriction options available - just let us know when you register.",
+      'BCIT Downtown Campus at 555 Seymour Street, Vancouver. We utilize a multi-level setup: Level 2 houses the main competition stage and audience seating, Level 5 contains the development workspace and sponsor workshops. The exclusive VIP after-party takes place on the AWS Building rooftop with stunning city views.',
   },
   {
-    question: 'What happens after the hackathon?',
+    question: 'How do tickets work and why do you charge?',
     answer:
-      "Winners will be announced at the closing ceremony, and all projects will be showcased on our website. We'll also provide networking opportunities with sponsors and potential employers.",
+      "Tickets are available through Lu.ma and partner platforms. We charge only for crowd control and to ensure attendees are genuinely interested in cloud technology and innovation. This isn't about profit - all proceeds go directly to our nominated charity while ensuring we get engaged, enthusiastic audiences.",
   },
   {
-    question: 'Can I start working on my project before the event?',
+    question: 'What amenities and support are provided?',
     answer:
-      'No, all development must happen during the hackathon hours. However, you can prepare by researching ideas, setting up development environments, and forming teams beforehand.',
+      'Everything you need for an amazing experience: free food and beverages all day, high-speed WiFi, professional livestreaming setup, educational workshops, sponsor booths and demos, full technical support staff, security, and event coordination. We handle logistics so you can focus on creating and competing.',
+  },
+  {
+    question: 'How should I prepare for the competition?',
+    answer:
+      'Attend our mandatory pre-event office hours and complete self-paced education modules (participation is tracked). Submit any promotional materials via Google Drive beforehand, but remember - all actual development must happen live during the event. The challenge problem will be revealed on competition day for fair play!',
+  },
+  {
+    question: 'What happens if I want to attend as a spectator only?',
+    answer:
+      "Perfect! Spectator tickets give you full access to watch all three rounds, participate in live voting, enjoy the entertainment, network during breaks, visit sponsor booths, and experience the energy of competitive development. You're not just watching - you're part of the show as a voting judge!",
   },
 ];

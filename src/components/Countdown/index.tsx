@@ -43,9 +43,7 @@ const Countdown = () => {
   return (
     <div className="w-full max-w-xl mx-auto">
       <div className="text-center mb-6">
-        <h3 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-2">
-          Event Starts In
-        </h3>
+        <h3 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-2">Starts In</h3>
         <div className="w-24 h-1 bg-gradient-primary mx-auto rounded-full"></div>
       </div>
 
@@ -71,16 +69,16 @@ const Countdown = () => {
               </div>
 
               {/* Animated border */}
-              <div className="absolute inset-0 rounded-lg border-2 border-primary opacity-50 animate-pulse"></div>
+              <div className="absolute inset-0 rounded-lg border-2  opacity-50 animate-pulse" />
             </div>
           </div>
         ))}
       </div>
 
       {/* Progress bar */}
-      <div className="mt-8">
+      <div className="mt-4">
         <div className="w-full bg-muted rounded-full h-2 overflow-hidden">
-          <div className="h-full bg-gradient-primary animate-pulse"></div>
+          <div className="h-full bg-gradient-primary animate-pulse" />
         </div>
         <p className="text-center font-body text-sm text-muted-foreground mt-2">
           The countdown to innovation begins now
