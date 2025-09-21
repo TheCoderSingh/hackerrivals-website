@@ -28,7 +28,7 @@ const Sponsors = () => {
   };
 
   return (
-    <section id="sponsors" className="py-16 md:py-20 px-4 relative overflow-hidden">
+    <section id="sponsors" className="py-16 md:py-30 px-4 relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-accent rounded-full blur-3xl animate-pulse" />

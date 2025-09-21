@@ -3,5 +3,5 @@ export const navItems = [
   { name: 'Schedule', href: '#schedule' },
   { name: 'Register', href: '#register' },
   { name: 'Sponsors', href: '#sponsors' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'FAQ', href: '#faq' },
 ];

@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import Schedule from './components/Schedule';
 import Register from './components/Register';
 import Sponsors from './components/Sponsors';
+import FAQ from './components/FAQ';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Schedule />
         <Register />
         <Sponsors />
+        <FAQ />
       </main>
     </IconoirProvider>
   );
