@@ -45,6 +45,7 @@ body {
 
 * {
   border-color: hsl(var(--color-border));
+  scroll-behavior: smooth;
 }
 
 @keyframes glow-pulse {

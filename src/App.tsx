@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Schedule from './components/Schedule';
+import Register from './components/Register';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <main>
         <Hero />
         <Schedule />
+        <Register />
       </main>
     </IconoirProvider>
   );
