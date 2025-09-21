@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Schedule from './components/Schedule';
 import Register from './components/Register';
+import Sponsors from './components/Sponsors';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Hero />
         <Schedule />
         <Register />
+        <Sponsors />
       </main>
     </IconoirProvider>
   );
