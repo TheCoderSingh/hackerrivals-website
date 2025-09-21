@@ -1,6 +1,7 @@
 import { IconoirProvider } from 'iconoir-react';
 import './App.css';
 import Navbar from './components/Navbar';
+import Hero from './components/Hero';
 
 function App() {
   return (
@@ -8,6 +9,10 @@ function App() {
       <header>
         <Navbar />
       </header>
+
+      <main>
+        <Hero />
+      </main>
     </IconoirProvider>
   );
 }

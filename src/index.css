@@ -2,10 +2,11 @@
 @import 'tailwindcss';
 
 @theme {
-  /* --color-primary: #121417e6; */
   --color-primary: 195 100% 50%;
   --color-secondary: 120 100% 55%;
   --color-accent: 280 100% 60%;
+  --color-muted: 220 13% 15%;
+  --color-muted-foreground: 220 9% 65%;
 
   --color-background: 220 13% 8%;
   --color-foreground: 210 40% 98%;
@@ -15,10 +16,24 @@
 
   --color-card: 220 13% 10%;
 
+  --color-neon-blue: 210 100% 60%;
+  --color-neon-glow: 195 100% 50%;
+  --color-neon-green: 120 100% 55%;
+  --color-neon-purple: 280 100% 60%;
+  --color-neon-orange: 30 100% 60%;
+
+  --gradient-primary: linear-gradient(135deg, hsl(195 100% 50%), hsl(280 100% 60%));
+  --gradient-dark: linear-gradient(180deg, hsl(220 13% 10%), hsl(220 13% 8%));
+
   --font-heading: 'Orbitron', monospace;
   --font-body: 'Rajdhani', sans-serif;
 
+  --background-image-floating: url('/src/assets/hero-float.png');
+  --background-image-hero: url('/src/assets/hero-bg.png');
+  --background-image-gradient-primary: var(--gradient-primary);
   --animation-pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+  --shadow-neon: 0 0 20px hsl(195 100% 50% / 0.5);
 }
 
 body {
@@ -56,6 +71,40 @@ body {
   }
 }
 
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-15px) rotate(2deg);
+  }
+  66% {
+    transform: translateY(-5px) rotate(-1deg);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
 .animate-glow-pulse {
   animation: 2s ease-in-out 0s infinite normal none running glow-pulse;
   background: linear-gradient(to right, hsl(195 100% 50%), hsl(280 100% 60%));
@@ -71,6 +120,15 @@ body {
   opacity: 0;
 }
 
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.8s ease-out forwards;
+  opacity: 0;
+}
+
 .text-glow {
   color: transparent;
   background-image: linear-gradient(
@@ -81,8 +139,49 @@ body {
   );
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  /* -webkit-text-fill-color: transparent; */
   filter: drop-shadow(0 0 15px hsl(var(--color-primary) / 0.5));
+}
+
+.text-neon {
+  color: hsl(var(--color-primary));
+  filter: drop-shadow(0 0 10px hsl(var(--color-primary) / 0.7));
+}
+
+.border-primary {
+  border-color: hsl(var(--color-primary));
+}
+
+.shadow-neon {
+  box-shadow: var(--shadow-neon);
+}
+
+.text-primary {
+  color: hsl(var(--color-primary));
+}
+
+.text-muted-foreground {
+  color: hsl(var(--color-muted-foreground));
+}
+
+.card-gaming {
+  background-color: hsl(var(--color-card));
+  border: 1px solid hsl(var(--color-border));
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow:
+    0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+}
+
+.card-gaming:hover {
+  border-color: hsl(var(--color-primary));
+  box-shadow:
+    0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1),
+    0 0 20px hsl(var(--color-primary) / 0.3);
 }
 
 .btn-neon {
@@ -99,4 +198,29 @@ body {
 .btn-neon:hover {
   transform: scale(1.05);
   box-shadow: 0 0 30px hsl(var(--color-primary) / 0.8);
+}
+
+.delay-100 {
+  animation-delay: 0.1s;
+}
+.delay-200 {
+  animation-delay: 0.2s;
+}
+.delay-300 {
+  animation-delay: 0.3s;
+}
+.delay-400 {
+  animation-delay: 0.4s;
+}
+.delay-500 {
+  animation-delay: 0.5s;
+}
+.delay-600 {
+  animation-delay: 0.6s;
+}
+.delay-700 {
+  animation-delay: 0.7s;
+}
+.delay-800 {
+  animation-delay: 0.8s;
 }
