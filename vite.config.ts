@@ -6,5 +6,5 @@ import eslintPlugin from '@nabla/vite-plugin-eslint';
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss(), eslintPlugin({})],
-  base: '.'
+  base: '/hackerrivals-website/'
 });
