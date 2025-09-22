@@ -1,8 +1,11 @@
 import { Flash } from 'iconoir-react';
 import circuitPattern from '../../assets/circuit-pattern.jpg';
 import { eSportsContent } from '../../constants/esports';
+import { isEventActive } from '../../constants/eventConfig';
 
 const ESportsSection = () => {
+  const eventActive = isEventActive();
+
   return (
     <section
       className="relative overflow-hidden"
@@ -90,40 +93,44 @@ const ESportsSection = () => {
             </div>
           </div>
 
-          {/* Timeline Competition Format */}
-          <div className="relative mb-24">
-            <div className="text-center mb-16">
-              <h3 className="font-heading font-bold text-4xl md:text-5xl text-glow mb-4">
-                {eSportsContent.timeline.title}
-              </h3>
-              <div className="w-32 h-1 bg-gradient-to-r from-primary via-secondary to-accent mx-auto rounded-full" />
-            </div>
+          {/* Timeline Competition Format - Only show when event is active */}
+          {eventActive && (
+            <div className="relative mb-24">
+              <div className="text-center mb-16">
+                <h3 className="font-heading font-bold text-4xl md:text-5xl text-glow mb-4">
+                  {eSportsContent.timeline.title}
+                </h3>
+                <div className="w-32 h-1 bg-gradient-to-r from-primary via-secondary to-accent mx-auto rounded-full" />
+              </div>
 
-            <div className="space-y-16">
-              <div className="flex flex-col lg:flex-row items-center gap-8">
-                {eSportsContent.timeline.rounds.map((round, index) => (
-                  <div key={index} className="lg:w-1/3 text-center">
-                    <div
-                      className={`w-20 h-20 bg-gradient-to-br ${round.colors.background} rounded-full flex items-center justify-center mx-auto mb-4 border-4 border-background shadow-lg`}
-                    >
-                      {round.icon ? (
-                        <round.icon className="w-10 h-10 text-white" />
-                      ) : (
-                        <span className="font-heading font-black text-2xl text-white">
-                          {round.number}
-                        </span>
-                      )}
+              <div className="space-y-16">
+                <div className="flex flex-col lg:flex-row items-center gap-8">
+                  {eSportsContent.timeline.rounds.map((round, index) => (
+                    <div key={index} className="lg:w-1/3 text-center">
+                      <div
+                        className={`w-20 h-20 bg-gradient-to-br ${round.colors.background} rounded-full flex items-center justify-center mx-auto mb-4 border-4 border-background shadow-lg`}
+                      >
+                        {round.icon ? (
+                          <round.icon className="w-10 h-10 text-white" />
+                        ) : (
+                          <span className="font-heading font-black text-2xl text-white">
+                            {round.number}
+                          </span>
+                        )}
+                      </div>
+                      <h4 className={`font-heading font-bold text-2xl ${round.colors.text} mb-2`}>
+                        {round.title}
+                      </h4>
+                      <p className="text-lg font-semibold text-muted-foreground mb-3">
+                        {round.time}
+                      </p>
+                      <p className="text-muted-foreground">{round.description}</p>
                     </div>
-                    <h4 className={`font-heading font-bold text-2xl ${round.colors.text} mb-2`}>
-                      {round.title}
-                    </h4>
-                    <p className="text-lg font-semibold text-muted-foreground mb-3">{round.time}</p>
-                    <p className="text-muted-foreground">{round.description}</p>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
     </section>

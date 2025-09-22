@@ -1,8 +1,11 @@
+import { getCurrentEventContent } from './eventConfig';
+
+const currentEvent = getCurrentEventContent();
+
 export const registrationContent = {
   header: {
-    title: 'Join the Battle',
-    subtitle:
-      'Ready to compete? Register your team and prepare for the ultimate hackathon showdown.',
+    title: currentEvent.registration.title,
+    subtitle: currentEvent.registration.subtitle,
   },
   awsDay: {
     title: 'Ready to register?',
@@ -13,7 +16,7 @@ export const registrationContent = {
       'Check your inbox for the Hacker Rivals confirmation email.',
       'Follow the confirmation email to complete your team registration.',
     ],
-    button: 'Register for AWS Day',
+    button: currentEvent.registration.buttonText,
     contact: 'Need help? Contact us',
     contactEmail: 'hello@hackerrivals.example',
     note: 'Note: This event is part of AWS Day. Your Hacker Rivals registration will be confirmed after completing the AWS Day ticket purchase on Luma.',

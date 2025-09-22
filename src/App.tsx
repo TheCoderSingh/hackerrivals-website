@@ -10,8 +10,11 @@ import Sponsors from './components/Sponsors';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import SEOOptimizations from './components/SEOOptimizations';
+import { isEventActive } from './constants/eventConfig';
 
 function App() {
+  const eventActive = isEventActive();
+
   return (
     <IconoirProvider iconProps={{ width: '2em', height: '2em', color: 'white', strokeWidth: 2 }}>
       <SEOOptimizations />
@@ -22,8 +25,8 @@ function App() {
       <main id="main-content">
         <Hero />
         <ESportsSection />
-        <Schedule />
-        <VenueInfo />
+        {eventActive && <Schedule />}
+        {eventActive && <VenueInfo />}
         <Register />
         <Sponsors />
         <FAQ />

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { heroContent } from '../../constants/hero';
+import { isEventActive } from '../../constants/eventConfig';
 
 const Countdown = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -9,7 +10,13 @@ const Countdown = () => {
     seconds: 0,
   });
 
+  const eventActive = isEventActive();
+
   useEffect(() => {
+    if (!eventActive || !('targetDate' in heroContent.countdown)) {
+      return;
+    }
+
     const targetDate = new Date(heroContent.countdown.targetDate).getTime();
 
     const updateTimer = () => {
@@ -32,7 +39,34 @@ const Countdown = () => {
     const interval = setInterval(updateTimer, 1000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [eventActive]);
+
+  // For inactive events, show a simple message instead of countdown
+  if (!eventActive) {
+    const noEventCountdown = heroContent.countdown as {
+      title: string;
+      message: string;
+      progressText: string;
+    };
+
+    return (
+      <div className="w-full max-w-xl mx-auto">
+        <div className="text-center mb-6">
+          <h3 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-2">
+            {noEventCountdown.title}
+          </h3>
+          <div className="w-24 h-1 bg-gradient-primary mx-auto rounded-full"></div>
+        </div>
+
+        <div className="card-gaming text-center p-6">
+          <p className="text-lg md:text-xl text-muted-foreground mb-4">
+            {noEventCountdown.message}
+          </p>
+          <p className="text-sm text-muted-foreground">{noEventCountdown.progressText}</p>
+        </div>
+      </div>
+    );
+  }
 
   const timeUnits = [
     { label: 'Days', value: timeLeft.days },

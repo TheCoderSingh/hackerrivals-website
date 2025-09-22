@@ -1,3 +1,16 @@
+import { getCurrentEventContent } from './eventConfig';
+
+const getEventInfoItems = () => {
+  const eventContent = getCurrentEventContent();
+  return [
+    eventContent.event.date,
+    'In-Person Event',
+    eventContent.event.prize,
+    '1-5 Team Members',
+    'All Skill Levels',
+  ];
+};
+
 export const footerContent = {
   brand: {
     name: 'HACKERRIVALS',
@@ -9,13 +22,9 @@ export const footerContent = {
   },
   eventInfo: {
     title: 'Event Details',
-    items: [
-      'October 25, 2025',
-      'In-Person Event',
-      '$1000 Cash Prize',
-      '1-5 Team Members',
-      'All Skill Levels',
-    ],
+    get items() {
+      return getEventInfoItems();
+    },
   },
   contact: {
     title: 'Contact',

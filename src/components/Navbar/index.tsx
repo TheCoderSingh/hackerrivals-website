@@ -1,9 +1,19 @@
 import { Menu, XmarkSquareSolid } from 'iconoir-react';
 import { navItems, navbarContent } from '../../constants/navbar';
+import { isEventActive } from '../../constants/eventConfig';
 import { useState } from 'react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const eventActive = isEventActive();
+
+  // Filter nav items based on event state
+  const filteredNavItems = navItems.filter((item) => {
+    if (!eventActive && (item.name === 'Schedule' || item.name === 'Venue')) {
+      return false;
+    }
+    return true;
+  });
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-background/90 backdrop-blur-md border-b border-border transition-all duration-300">
@@ -18,7 +28,7 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6 lg:space-x-8 uppercase">
-            {navItems.map((item, index) => (
+            {filteredNavItems.map((item, index) => (
               <a
                 key={item.name}
                 href={item.href}
@@ -52,7 +62,7 @@ const Navbar = () => {
         {isOpen && (
           <div className="md:hidden py-4 border-t border-border animate-slide-up">
             <div className="flex flex-col space-y-4">
-              {navItems.map((item, index) => (
+              {filteredNavItems.map((item, index) => (
                 <a
                   key={item.name}
                   href={item.href}
