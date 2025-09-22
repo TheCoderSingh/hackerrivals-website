@@ -1,4 +1,5 @@
 import Countdown from '../Countdown';
+import { heroContent } from '../../constants/hero';
 
 const Hero = () => {
   return (
@@ -38,10 +39,10 @@ const Hero = () => {
       <div className="relative z-10 text-center px-4 max-w-7xl mx-auto w-full mt-20">
         <div className="mb-0 animate-fade-in">
           <h1 className="font-heading font-black text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-8xl text-glow leading-tight">
-            HACKER
+            {heroContent.title.main}
           </h1>
           <h1 className="block text-primary animate-pulse font-heading font-black text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-8xl text-glow leading-tight md:-mt-8">
-            RIVALS
+            {heroContent.title.highlight}
           </h1>
         </div>
       </div>
@@ -49,11 +50,13 @@ const Hero = () => {
       {/* Tagline */}
       <div className="mb-6 animate-fade-in delay-200">
         <p className="font-body text-lg sm:text-xl md:text-2xl lg:text-3xl font-light text-foreground/90 max-w-4xl mx-auto leading-relaxed text-center">
-          World's First{' '}
-          <span className="text-neon font-semibold animate-pulse">eSports Hackathon</span>
+          {heroContent.tagline.prefix}{' '}
+          <span className="text-neon font-semibold animate-pulse">
+            {heroContent.tagline.highlight}
+          </span>
           <br />
-          Shorter, smarter, and designed for{' '}
-          <span className="text-primary font-semibold">spectators</span>
+          {heroContent.tagline.suffix}{' '}
+          <span className="text-primary font-semibold">{heroContent.tagline.emphasis}</span>
         </p>
       </div>
 
@@ -61,13 +64,13 @@ const Hero = () => {
       <div className="mb-8 animate-fade-in delay-300">
         <div className="inline-block px-4 md:px-6 py-3 md:py-4 bg-card/80 backdrop-blur-md border border-primary rounded-lg shadow-neon">
           <p className="font-body text-lg md:text-xl lg:text-2xl font-semibold text-primary">
-            October 25, 2025
+            {heroContent.event.date}
           </p>
           <p className="font-body text-sm md:text-base text-muted-foreground text-center">
-            BCIT Downtown Campus • 10am-5pm
+            {heroContent.event.location}
           </p>
           <p className="font-body text-xs md:text-sm text-accent text-center mt-1">
-            + VIP After Party @ AWS Building
+            {heroContent.event.afterParty}
           </p>
         </div>
       </div>

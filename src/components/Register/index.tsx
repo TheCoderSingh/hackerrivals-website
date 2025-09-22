@@ -1,3 +1,5 @@
+import { registrationContent } from '../../constants/registration';
+
 const Register = () => {
   return (
     <section id="register" className="min-h-screen py-16 md:py-30 px-4 relative overflow-hidden">
@@ -10,11 +12,11 @@ const Register = () => {
       <div className="max-w-5xl mx-auto relative z-10">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl mb-4 text-glow animate-fade-in">
-            Join the Battle
+            {registrationContent.header.title}
           </h2>
           <div className="w-24 h-1 bg-gradient-secondary mx-auto rounded-full mb-4 animate-fade-in delay-200"></div>
           <p className="font-body text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in delay-300">
-            Ready to compete? Register your team and prepare for the ultimate hackathon showdown.
+            {registrationContent.header.subtitle}
           </p>
         </div>
 
@@ -23,32 +25,21 @@ const Register = () => {
             <div className="flex flex-col md:flex-row items-center gap-6">
               <div className="flex-1 text-center md:text-left">
                 <h3 className="font-heading font-bold text-2xl md:text-3xl text-white mb-2">
-                  Ready to register?
+                  {registrationContent.awsDay.title}
                 </h3>
                 <p className="font-body text-sm md:text-base text-muted-foreground max-w-xl">
-                  Secure your spot by purchasing an AWS Day ticket on Luma. After your ticket is
-                  confirmed, we’ll send you an email to finalize your Hacker Rivals registration.
+                  {registrationContent.awsDay.description}
                 </p>
 
                 <ul className="mt-4 text-xs md:text-sm text-muted-foreground space-y-2">
-                  <li className="flex items-start gap-2">
-                    <span className="inline-flex items-center justify-center w-6 h-6 bg-primary/20 text-primary rounded-full text-sm">
-                      1
-                    </span>
-                    Purchase an AWS Day ticket on Luma.
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="inline-flex items-center justify-center w-6 h-6 bg-primary/20 text-primary rounded-full text-sm">
-                      2
-                    </span>
-                    Check your inbox for the Hacker Rivals confirmation email.
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="inline-flex items-center justify-center w-6 h-6 bg-primary/20 text-primary rounded-full text-sm">
-                      3
-                    </span>
-                    Follow the confirmation email to complete your team registration.
-                  </li>
+                  {registrationContent.awsDay.steps.map((step, index) => (
+                    <li key={index} className="flex items-start gap-2">
+                      <span className="inline-flex items-center justify-center w-6 h-6 bg-primary/20 text-primary rounded-full text-sm">
+                        {index + 1}
+                      </span>
+                      {step}
+                    </li>
+                  ))}
                 </ul>
               </div>
 
@@ -58,24 +49,23 @@ const Register = () => {
                     type="submit"
                     className="btn-neon w-full font-body text-lg py-3 transform hover:scale-105 transition-all duration-300"
                   >
-                    Register for AWS Day
+                    {registrationContent.awsDay.button}
                   </button>
                 </div>
 
                 <div className="mt-3">
                   <a
-                    href="mailto:hello@hackerrivals.example"
+                    href={`mailto:${registrationContent.awsDay.contactEmail}`}
                     className="text-sm text-muted-foreground hover:text-white underline"
                   >
-                    Need help? Contact us
+                    {registrationContent.awsDay.contact}
                   </a>
                 </div>
               </div>
             </div>
 
             <p className="mt-6 text-xs text-muted-foreground/80 text-center md:text-left">
-              Note: This event is part of AWS Day. Your Hacker Rivals registration will be confirmed
-              after completing the AWS Day ticket purchase on Luma.
+              {registrationContent.awsDay.note}
             </p>
           </div>
         </div>
@@ -84,11 +74,11 @@ const Register = () => {
         <div className="max-w-4xl mx-auto mt-16 md:mt-20">
           <div className="text-center mb-8">
             <h3 className="font-heading font-bold text-2xl md:text-3xl lg:text-4xl mb-4 text-glow animate-fade-in">
-              Complete Your Registration
+              {registrationContent.form.title}
             </h3>
             <div className="w-16 h-1 bg-gradient-primary mx-auto rounded-full mb-4 animate-fade-in delay-200"></div>
             <p className="font-body text-base md:text-lg text-muted-foreground animate-fade-in delay-300">
-              Fill out the form below to secure your spot in the ultimate hackathon showdown.
+              {registrationContent.form.subtitle}
             </p>
           </div>
 

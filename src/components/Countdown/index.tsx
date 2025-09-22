@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { heroContent } from '../../constants/hero';
 
 const Countdown = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -9,7 +10,7 @@ const Countdown = () => {
   });
 
   useEffect(() => {
-    const targetDate = new Date('2025-10-25T13:00:00').getTime();
+    const targetDate = new Date(heroContent.countdown.targetDate).getTime();
 
     const updateTimer = () => {
       const now = new Date().getTime();
@@ -43,7 +44,9 @@ const Countdown = () => {
   return (
     <div className="w-full max-w-xl mx-auto">
       <div className="text-center mb-6">
-        <h3 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-2">Starts In</h3>
+        <h3 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-2">
+          {heroContent.countdown.title}
+        </h3>
         <div className="w-24 h-1 bg-gradient-primary mx-auto rounded-full"></div>
       </div>
 
@@ -81,7 +84,7 @@ const Countdown = () => {
           <div className="h-full bg-gradient-primary animate-pulse" />
         </div>
         <p className="text-center font-body text-sm text-muted-foreground mt-2">
-          The countdown to innovation begins now
+          {heroContent.countdown.progressText}
         </p>
       </div>
     </div>

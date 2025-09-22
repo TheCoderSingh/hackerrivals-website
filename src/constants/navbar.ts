@@ -7,3 +7,8 @@ export const navItems = [
   { name: 'Sponsors', href: '#sponsors' },
   { name: 'FAQ', href: '#faq' },
 ];
+
+export const navbarContent = {
+  logo: 'HACKERRIVALS',
+  registerButton: 'Register Now',
+};

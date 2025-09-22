@@ -1,5 +1,5 @@
 import { Menu, XmarkSquareSolid } from 'iconoir-react';
-import { navItems } from '../../constants/navbar';
+import { navItems, navbarContent } from '../../constants/navbar';
 import { useState } from 'react';
 
 const Navbar = () => {
@@ -12,7 +12,7 @@ const Navbar = () => {
           {/* Logo */}
           <div>
             <a className="font-heading animate-glow-pulse text-glow text-lg font-bold" href="#home">
-              HACKERRIVALS
+              {navbarContent.logo}
             </a>
           </div>
 
@@ -36,7 +36,7 @@ const Navbar = () => {
                 if (el) el.scrollIntoView();
               }}
             >
-              Register Now
+              {navbarContent.registerButton}
             </button>
           </div>
 
@@ -71,7 +71,7 @@ const Navbar = () => {
                   setIsOpen(false);
                 }}
               >
-                Register Now
+                {navbarContent.registerButton}
               </button>
             </div>
           </div>

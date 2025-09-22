@@ -1,4 +1,5 @@
 import { sponsors } from '../../constants/sponsors';
+import { sponsorsContent } from '../../constants/sponsorsContent';
 
 const Sponsors = () => {
   const getTierStyle = (tier: string) => {
@@ -38,19 +39,18 @@ const Sponsors = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl mb-4 text-glow animate-fade-in">
-            Our Sponsors
+            {sponsorsContent.header.title}
           </h2>
           <div className="w-24 h-1 bg-gradient-accent mx-auto rounded-full mb-4 animate-fade-in delay-200"></div>
           <p className="font-body text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in delay-300">
-            Powered by industry leaders who believe in the future of innovation and competitive
-            coding.
+            {sponsorsContent.header.subtitle}
           </p>
         </div>
 
         {/* Platinum Sponsors */}
         <div className="mb-12 md:mb-16 animate-slide-up delay-400">
           <h3 className="font-heading font-bold text-xl md:text-2xl text-center mb-8 md:mb-12 text-primary animate-glow-pulse">
-            Platinum Sponsors
+            {sponsorsContent.tiers.platinum}
           </h3>
           <div className="flex justify-center">
             {sponsors
@@ -73,7 +73,7 @@ const Sponsors = () => {
         {/* Gold Sponsors */}
         <div className="mb-12 md:mb-16 animate-slide-up delay-500">
           <h3 className="font-heading font-bold text-lg md:text-xl text-center mb-8 text-secondary animate-glow-pulse">
-            Gold Sponsors
+            {sponsorsContent.tiers.gold}
           </h3>
           <div className="flex justify-center gap-4 md:gap-8 flex-wrap">
             {sponsors
@@ -96,7 +96,7 @@ const Sponsors = () => {
         {/* Silver Sponsors */}
         <div className="mb-12 md:mb-16 animate-slide-up delay-600">
           <h3 className="font-heading font-bold text-base md:text-lg text-center mb-8 text-accent animate-glow-pulse">
-            Silver Sponsors
+            {sponsorsContent.tiers.silver}
           </h3>
           <div className="flex justify-center gap-3 md:gap-6 flex-wrap">
             {sponsors
@@ -119,7 +119,7 @@ const Sponsors = () => {
         {/* Bronze Sponsors */}
         <div className="mb-12 md:mb-16 animate-slide-up delay-700">
           <h3 className="font-heading font-bold text-sm md:text-base text-center mb-8 text-muted-foreground">
-            Bronze Sponsors
+            {sponsorsContent.tiers.bronze}
           </h3>
           <div className="flex justify-center gap-2 md:gap-4 flex-wrap">
             {sponsors
@@ -142,13 +142,13 @@ const Sponsors = () => {
         <div className="text-center animate-fade-in delay-800">
           <div className="card-gaming max-w-3xl mx-auto transform hover:scale-105 transition-all duration-300">
             <h3 className="font-heading font-bold text-xl md:text-2xl mb-4 text-primary animate-glow-pulse">
-              Want to Sponsor?
+              {sponsorsContent.callToAction.title}
             </h3>
             <p className="font-body text-base md:text-lg text-muted-foreground mb-6 leading-relaxed">
-              Join us in supporting the next generation of developers and innovators.
+              {sponsorsContent.callToAction.description}
             </p>
             <button className="btn-secondary-neon font-body text-lg px-8 py-3 transform hover:scale-105 transition-all duration-300 hover:cursor-pointer">
-              Become a Sponsor
+              {sponsorsContent.callToAction.button}
             </button>
           </div>
         </div>

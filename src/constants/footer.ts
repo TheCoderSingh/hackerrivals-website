@@ -1,0 +1,46 @@
+export const footerContent = {
+  brand: {
+    name: 'HACKERRIVALS',
+    description:
+      'The ultimate eSports hackathon experience, designed for spectators and built for innovation.',
+  },
+  quickLinks: {
+    title: 'Quick Links',
+  },
+  eventInfo: {
+    title: 'Event Details',
+    items: [
+      'October 25, 2025',
+      'In-Person Event',
+      '$1000 Cash Prize',
+      '1-5 Team Members',
+      'All Skill Levels',
+    ],
+  },
+  contact: {
+    title: 'Contact',
+    items: [
+      'info@hackerrivals.com',
+      'Discord: /hackerrivals',
+      'Twitter: @hackerrivals',
+      'GitHub: /hackerrivals',
+    ],
+  },
+  bottom: {
+    copyright: '© 2025 HackerRivals. All rights reserved.',
+    links: [
+      { name: 'Privacy Policy', href: '#' },
+      { name: 'Terms of Service', href: '#' },
+      { name: 'Code of Conduct', href: '#' },
+    ],
+  },
+  social: {
+    email: 'info@hackerrivals.com',
+    links: [
+      { name: 'GitHub', href: '#', ariaLabel: 'GitHub' },
+      { name: 'Twitter', href: '#', ariaLabel: 'Twitter' },
+      { name: 'Discord', href: '#', ariaLabel: 'Discord' },
+      { name: 'Email', href: 'mailto:info@hackerrivals.com', ariaLabel: 'Email' },
+    ],
+  },
+};

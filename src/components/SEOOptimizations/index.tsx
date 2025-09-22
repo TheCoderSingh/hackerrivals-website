@@ -1,11 +1,12 @@
 import { useEffect } from 'react';
+import { seoContent } from '../../constants/seo';
 
 const SEOOptimizations = () => {
   useEffect(() => {
     // Add skip to main content link for accessibility
     const skipLink = document.createElement('a');
     skipLink.href = '#main-content';
-    skipLink.textContent = 'Skip to main content';
+    skipLink.textContent = seoContent.accessibility.skipToMainContent;
     skipLink.className =
       'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded z-50';
     skipLink.setAttribute('tabindex', '0');
@@ -25,8 +26,7 @@ const SEOOptimizations = () => {
     // Add preload for critical CSS fonts
     const fontPreload = document.createElement('link');
     fontPreload.rel = 'preload';
-    fontPreload.href =
-      'https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Rajdhani:wght@300;400;500;600;700&display=swap&family=Audiowide&display=swap';
+    fontPreload.href = seoContent.fontPreload.href;
     fontPreload.as = 'style';
     fontPreload.crossOrigin = 'anonymous';
     document.head.appendChild(fontPreload);
