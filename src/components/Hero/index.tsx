@@ -76,8 +76,32 @@ const Hero = () => {
       </div>
 
       {/* Countdown Timer */}
-      <div className="mb-12 animate-fade-in delay-400">
+      <div className="mb-8 animate-fade-in delay-400">
         <Countdown />
+      </div>
+
+      {/* Registration Buttons */}
+      <div className="mb-12 animate-fade-in delay-500">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-2xl mx-auto px-4">
+          <a
+            href="https://awsday.ca"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-neon font-body text-lg py-3 px-8 w-full sm:w-auto transform hover:scale-105 transition-all duration-300 text-center"
+          >
+            Attendee Ticket
+          </a>
+          <a
+            href="#register"
+            className="btn-neon font-body text-lg py-3 px-8 w-full sm:w-auto transform hover:scale-105 transition-all duration-300 text-center"
+          >
+            Apply to Compete
+          </a>
+        </div>
+        <p className="font-body text-sm text-muted-foreground text-center mt-3 max-w-lg mx-auto">
+          Choose your experience: Purchase a ticket to attend or apply to compete for the $1000
+          prize
+        </p>
       </div>
     </section>
   );

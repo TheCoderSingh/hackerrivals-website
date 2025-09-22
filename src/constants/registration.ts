@@ -7,6 +7,24 @@ export const registrationContent = {
     title: currentEvent.registration.title,
     subtitle: currentEvent.registration.subtitle,
   },
+  options: {
+    attendee: {
+      title: 'Attendee Experience',
+      description:
+        'Purchase a ticket to attend AWS Day and enjoy the conference experience. Watch the hackathon competition, network with professionals, and learn from industry experts.',
+      button: 'Buy Attendee Ticket',
+      link: 'https://awsday.ca',
+      note: 'Visit www.awsday.ca to learn more about the conference that Hacker Rivals is part of.',
+    },
+    competitor: {
+      title: 'Competitor Application',
+      description:
+        'Apply to compete in the hackathon for a chance to win the $1000 cash prize. Accepted competitors receive a free one-time ticket code for the event.',
+      button: 'Apply to Compete',
+      link: '#form',
+      note: 'We will notify accepted competitors and send them instructions along with a free one-time ticket code for the event.',
+    },
+  },
   awsDay: {
     title: 'Ready to register?',
     description:
@@ -22,8 +40,9 @@ export const registrationContent = {
     note: 'Note: This event is part of AWS Day. Your Hacker Rivals registration will be confirmed after completing the AWS Day ticket purchase on Luma.',
   },
   form: {
-    title: 'Complete Your Registration',
-    subtitle: 'Fill out the form below to secure your spot in the ultimate hackathon showdown.',
+    title: 'Apply to Compete',
+    subtitle:
+      'Submit your application below to be considered as a competitor. Selected teams will receive a free ticket code and compete for the $1000 cash prize.',
     sections: {
       team: {
         title: 'Team Information',
@@ -97,14 +116,14 @@ export const registrationContent = {
       },
     },
     terms: {
-      text: 'I agree to the Terms and Conditions and Privacy Policy. I understand that this is a competitive event and all submissions will be evaluated fairly.',
+      text: 'I agree to the Terms and Conditions and Privacy Policy. I understand that this is an application to compete and selection is not guaranteed.',
       links: {
         terms: 'Terms and Conditions',
         privacy: 'Privacy Policy',
       },
     },
     submit: {
-      button: 'Complete Registration',
+      button: 'Submit Application',
       confirmationText: "You'll receive a confirmation email within 24 hours",
     },
   },
