@@ -3,7 +3,11 @@ import circuitPattern from '../../assets/circuit-pattern.jpg';
 
 const ESportsSection = () => {
   return (
-    <section className="relative overflow-hidden" id="esports">
+    <section
+      className="relative overflow-hidden"
+      id="esports"
+      aria-label="eSports hackathon features and competition format"
+    >
       <div
         className="absolute inset-0 opacity-10"
         style={{
@@ -12,6 +16,9 @@ const ESportsSection = () => {
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
         }}
+        aria-hidden="true"
+        role="img"
+        aria-label="Circuit board pattern background for technology theme"
       />
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-background/80" />
 

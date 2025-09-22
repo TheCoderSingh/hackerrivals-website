@@ -5,10 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "npm run generate:sitemap && tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css}\""
+    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css}\"",
+    "generate:sitemap": "node scripts/generate-sitemap.js",
+    "seo:audit": "echo 'Run lighthouse CI or similar SEO audit tools here'"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.13",

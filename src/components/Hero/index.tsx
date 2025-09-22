@@ -5,15 +5,26 @@ const Hero = () => {
     <section
       className="min-h-screen flex flex-col items-center justify-center overflow-hidden"
       id="home"
+      aria-label="Hero section with event details and countdown"
     >
       {/* Background Image */}
-      <div className="absolute inset-0 opacity-30 bg-hero bg-cover bg-center bg-no-repeat" />
+      <div
+        className="absolute inset-0 opacity-30 bg-hero bg-cover bg-center bg-no-repeat"
+        aria-hidden="true"
+        role="img"
+        aria-label="Futuristic technology background pattern"
+      />
 
       {/* Background Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-dark" />
+      <div className="absolute inset-0 bg-gradient-dark" aria-hidden="true" />
 
       {/* Floating Elements */}
-      <div className="absolute inset-0 opacity-20 animate-float bg-floating bg-cover" />
+      <div
+        className="absolute inset-0 opacity-20 animate-float bg-floating bg-cover"
+        aria-hidden="true"
+        role="img"
+        aria-label="Floating geometric elements for visual enhancement"
+      />
 
       {/* Animated Background Particles */}
       <div className="absolute inset-0 opacity-30">

@@ -2,8 +2,17 @@ import { scheduleItems } from '../../constants/schedule';
 
 const Schedule = () => {
   return (
-    <section id="schedule" className="min-h-screen py-16 md:py-30 px-4 relative overflow-hidden">
-      <div className="absolute inset-0 opacity-15 bg-schedule bg-cover" />
+    <section
+      id="schedule"
+      className="min-h-screen py-16 md:py-30 px-4 relative overflow-hidden"
+      aria-label="Event schedule and timeline"
+    >
+      <div
+        className="absolute inset-0 opacity-15 bg-schedule bg-cover"
+        aria-hidden="true"
+        role="img"
+        aria-label="Technology circuit background pattern"
+      />
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-12 md:mb-16">

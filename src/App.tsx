@@ -9,15 +9,17 @@ import Register from './components/Register';
 import Sponsors from './components/Sponsors';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
+import SEOOptimizations from './components/SEOOptimizations';
 
 function App() {
   return (
     <IconoirProvider iconProps={{ width: '2em', height: '2em', color: 'white', strokeWidth: 2 }}>
+      <SEOOptimizations />
       <header>
         <Navbar />
       </header>
 
-      <main>
+      <main id="main-content">
         <Hero />
         <ESportsSection />
         <Schedule />
