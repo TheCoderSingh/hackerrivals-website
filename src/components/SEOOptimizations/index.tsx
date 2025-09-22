@@ -23,14 +23,6 @@ const SEOOptimizations = () => {
       }
     });
 
-    // Add preload for critical CSS fonts
-    const fontPreload = document.createElement('link');
-    fontPreload.rel = 'preload';
-    fontPreload.href = seoContent.fontPreload.href;
-    fontPreload.as = 'style';
-    fontPreload.crossOrigin = 'anonymous';
-    document.head.appendChild(fontPreload);
-
     // Cleanup function
     return () => {
       if (skipLink.parentNode) {
