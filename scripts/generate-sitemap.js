@@ -1,7 +1,11 @@
 #!/usr/bin/env node
 
 import { writeFileSync } from 'fs';
-import { join } from 'path';
+import { join, dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const baseUrl = 'https://hackerrivals.com';
 const currentDate = new Date().toISOString().split('T')[0];

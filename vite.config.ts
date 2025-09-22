@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [react(), tailwindcss(), eslintPlugin({})],
   build: {
     // Enable minification for better performance
-    minify: 'terser',
+    minify: 'esbuild',
     // Generate source maps for debugging (disable in production if needed)
     sourcemap: false,
     // Optimize asset handling
