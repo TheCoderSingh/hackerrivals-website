@@ -20,7 +20,26 @@ const Schedule = () => {
             Event Schedule
           </h2>
           <div className="w-24 h-1 bg-gradient-primary mx-auto rounded-full mb-4 animate-fade-in delay-200"></div>
-          <p className="font-body text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in delay-300">
+          
+          {/* Quick Action Links */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 animate-fade-in delay-300">
+            <a
+              href="#register"
+              className="inline-flex items-center px-6 py-3 bg-primary/10 hover:bg-primary/20 border border-primary rounded-lg text-primary font-semibold transition-all duration-300 hover:scale-105"
+            >
+              Get Attendee Tickets
+            </a>
+            <a
+              href="https://tally.so/r/your-form-id"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-6 py-3 bg-secondary/10 hover:bg-secondary/20 border border-secondary rounded-lg text-secondary font-semibold transition-all duration-300 hover:scale-105"
+            >
+              Enter Competition
+            </a>
+          </div>
+          
+          <p className="font-body text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in delay-400">
             A packed day of coding, creativity, and competition. From start to finish, it's designed
             for maximum excitement.
           </p>
@@ -68,7 +87,7 @@ const Schedule = () => {
         <div className="mt-12 md:mt-16 text-center animate-bounce-in delay-800">
           <div className="inline-block px-6 md:px-8 py-4 md:py-6 bg-card/80 backdrop-blur-md border border-primary rounded-lg shadow-neon hover:scale-105 transition-all duration-300">
             <p className="font-body text-lg md:text-xl text-primary font-semibold">
-              Total Duration: 10.5 Hours of Pure Innovation
+              Total Duration: 5 Hours of Pure Innovation, 2hrs of Action
             </p>
             <div className="mt-2 w-full bg-muted rounded-full h-2 overflow-hidden">
               <div className="h-full bg-gradient-primary animate-pulse"></div>

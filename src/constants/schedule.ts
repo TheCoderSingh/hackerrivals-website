@@ -13,15 +13,16 @@ export const scheduleItems = [
   {
     time: '10:00 AM',
     title: 'Registration Opens',
-    description: 'Welcome, check-in, and sponsor booth exploration',
+    description:
+      'Welcome, check-in, and sponsor booth exploration for attendees. Note: Competitors are selected before the event day.',
     icon: Group,
     color: 'text-primary',
     bgColor: 'bg-primary/10',
   },
   {
     time: '11:00 AM',
-    title: 'Keynote Talk',
-    description: 'Opening ceremony with rules, sponsor intros, and theme reveal',
+    title: 'Competitor Training',
+    description: 'Couchbase training session for competitors to prepare for the hackathon',
     icon: Flash,
     color: 'text-secondary',
     bgColor: 'bg-secondary/10',
@@ -59,9 +60,10 @@ export const scheduleItems = [
     bgColor: 'bg-accent/10',
   },
   {
-    time: '4:00 PM',
+    time: '4:30 PM',
     title: 'Wrap-up & Prize Ceremony',
-    description: 'Winner announcement, $1,000 prize, and charity donation',
+    description:
+      'Winner announcement, $1,000 cash prize sponsored by Couchbase, and charity donation',
     icon: Trophy,
     color: 'text-primary',
     bgColor: 'bg-primary/10',
