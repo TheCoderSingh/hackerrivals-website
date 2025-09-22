@@ -6,12 +6,18 @@ export const eSportsContent = {
       main: "World's First",
       highlight: 'eSports Hackathon',
     },
-    description:
-      'Where competitive gaming meets innovation - built for spectators and designed for maximum engagement',
+    description: {
+      main: 'Fueling Rivalry, Forging Innovation - built for spectators and designed for maximum engagement',
+      dynamic: {
+        prefix: 'Fueling ',
+        middle: '|',
+        suffix: '- built for spectators and designed for maximum engagement',
+      },
+    },
     highlights: {
-      competitive: 'competitive gaming',
-      innovation: 'innovation',
-      spectators: 'spectators',
+      rivalry: 'Rivalry',
+      innovation: 'Forging Innovation',
+      engagement: 'maximum engagement',
     },
   },
   features: [
@@ -57,7 +63,7 @@ export const eSportsContent = {
       {
         number: 1,
         title: 'Concept Presentation',
-        time: '12:30 PM - Level 2 Stage',
+        time: '12:30 PM - Level 5 Stage',
         description: 'Teams pitch their innovative concepts to judges and live audience.',
         colors: {
           background: 'from-primary to-primary/80',
@@ -67,7 +73,7 @@ export const eSportsContent = {
       {
         number: 2,
         title: 'MVP Knockout',
-        time: '2:15 PM - Level 2 Stage',
+        time: '2:15 PM - Level 5 Stage',
         description: 'Intense elimination round - only 2 teams advance to the final!',
         colors: {
           background: 'from-secondary to-secondary/80',
@@ -77,7 +83,7 @@ export const eSportsContent = {
       {
         number: 3,
         title: 'Championship Final',
-        time: '4:00 PM - Main Stage',
+        time: '4:00 PM - Main Stage (Level 2)',
         description: 'The ultimate showdown with polished presentations and live demos!',
         colors: {
           background: 'from-accent to-accent/80',

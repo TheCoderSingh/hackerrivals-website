@@ -45,19 +45,15 @@ const ESportsSection = () => {
               </h2>
             </div>
             <p className="font-body text-2xl md:text-3xl text-muted-foreground max-w-5xl mx-auto leading-relaxed">
-              Where{' '}
+              {eSportsContent.header.description.dynamic.prefix}{' '}
               <span className="text-neon font-bold">
-                {eSportsContent.header.highlights.competitive}
+                {eSportsContent.header.highlights.rivalry}
               </span>{' '}
-              meets{' '}
+              {eSportsContent.header.description.dynamic.middle}{' '}
               <span className="text-secondary font-bold">
                 {eSportsContent.header.highlights.innovation}
               </span>{' '}
-              - built for{' '}
-              <span className="text-accent font-bold">
-                {eSportsContent.header.highlights.spectators}
-              </span>{' '}
-              and designed for maximum engagement
+              {eSportsContent.header.description.dynamic.suffix}
             </p>
           </div>
 
