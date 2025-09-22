@@ -20,7 +20,7 @@ const Schedule = () => {
             Event Schedule
           </h2>
           <div className="w-24 h-1 bg-gradient-primary mx-auto rounded-full mb-4 animate-fade-in delay-200"></div>
-          
+
           {/* Quick Action Links */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 animate-fade-in delay-300">
             <a
@@ -38,7 +38,7 @@ const Schedule = () => {
               Enter Competition
             </a>
           </div>
-          
+
           <p className="font-body text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in delay-400">
             A packed day of coding, creativity, and competition. From start to finish, it's designed
             for maximum excitement.
