@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
+import { writeFileSync } from 'fs';
+import { join } from 'path';
 
 const baseUrl = 'https://hackerrivals.com';
 const currentDate = new Date().toISOString().split('T')[0];
@@ -76,6 +76,6 @@ ${urls
   
 </urlset>`;
 
-const outputPath = path.join(__dirname, '../public/sitemap.xml');
-fs.writeFileSync(outputPath, sitemap);
+const outputPath = join(__dirname, '../public/sitemap.xml');
+writeFileSync(outputPath, sitemap);
 console.log('✅ Sitemap generated successfully at:', outputPath);
