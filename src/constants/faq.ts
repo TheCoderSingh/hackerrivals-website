@@ -2,7 +2,7 @@ export const faqItems = [
   {
     question: 'What makes this different from a traditional hackathon?',
     answer:
-      "Hacker Rivals is the world's first eSports hackathon! We've revolutionized the traditional hackathon format by designing it specifically for spectators with live audience engagement, professional entertainment, and a fast-paced 3-hour competition. Think competitive gaming tournament meets innovation challenge - complete with professional MC, cheerleaders, mascots, and real-time audience voting.",
+      "Hacker Rivals is the world's first eSports style hackathon! We've revolutionized the traditional hackathon format by designing it specifically for spectators with live audience engagement, professional entertainment, and a fast-paced 3-hour competition. Think competitive gaming tournament meets innovation challenge - complete with professional MC, cheerleaders, mascots, and real-time audience voting.",
   },
   {
     question: 'How does the eSports competition format work?',

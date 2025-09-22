@@ -1,6 +1,6 @@
 # Hacker Rivals Sponsor Proposal
 
-## World's First eSports Hackathon
+## World's First eSports Style Hackathon
 
 **Event Date:** October 25th, 2025  
 **Location:** BCIT Downtown Campus, Vancouver  
@@ -10,7 +10,7 @@
 
 ## Executive Summary
 
-Hacker Rivals is the world's first eSports hackathon, blending the competitive excitement of esports with the innovation of traditional hackathons. Our unique format creates an entertaining, spectator-friendly experience that drives massive engagement and visibility for our sponsors.
+Hacker Rivals is the world's first eSports style hackathon, blending the competitive excitement of esports with the innovation of traditional hackathons. Our unique format creates an entertaining, spectator-friendly experience that drives massive engagement and visibility for our sponsors.
 
 ---
 
@@ -183,7 +183,7 @@ Hacker Rivals is the world's first eSports hackathon, blending the competitive e
 
 ## Call to Action
 
-Join us in creating the world's first eSports hackathon experience. This is your opportunity to be part of something revolutionary while gaining unprecedented access to engaged technical talent and innovation-focused communities.
+Join us in creating the world's first eSports style hackathon experience. This is your opportunity to be part of something revolutionary while gaining unprecedented access to engaged technical talent and innovation-focused communities.
 
 **Next Steps:**
 
