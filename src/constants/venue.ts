@@ -1,4 +1,4 @@
-import { Wifi, CoffeeCup, Camera } from 'iconoir-react';
+import { CoffeeCup, Group, Trophy } from 'iconoir-react';
 
 export const venueContent = {
   header: {
@@ -20,7 +20,7 @@ export const venueContent = {
     labels: {
       date: 'Date:',
       time: 'Time:',
-      afterParty: 'After Party:',
+      afterParty: 'VIP After Party:',
     },
     transportation: {
       title: 'Getting There',
@@ -53,7 +53,6 @@ export const venueContent = {
       title: 'Level 5 - Hackathon Hub',
       features: [
         'Hackathon Workspace',
-        'Live Stream from Main Stage',
         'Workshop Rooms',
         'Breakout Spaces',
         'Additional Sponsor Booths',
@@ -61,15 +60,6 @@ export const venueContent = {
     },
   },
   amenities: [
-    {
-      icon: Wifi,
-      title: 'High-Speed Internet',
-      description: 'Enterprise-grade WiFi and wired connections for all participants',
-      colors: {
-        background: 'bg-primary/20',
-        text: 'text-primary',
-      },
-    },
     {
       icon: CoffeeCup,
       title: 'Food & Beverages',
@@ -80,34 +70,22 @@ export const venueContent = {
       },
     },
     {
-      icon: Camera,
-      title: 'Live Streaming',
-      description: 'Professional livestream setup with multi-camera coverage',
+      icon: Group,
+      title: 'Networking Opportunities',
+      description: 'Connect with industry professionals, sponsors, and fellow participants',
+      colors: {
+        background: 'bg-primary/20',
+        text: 'text-primary',
+      },
+    },
+    {
+      icon: Trophy,
+      title: 'Prize Competition',
+      description: '$1,000 cash prize sponsored by Couchbase plus additional sponsor prizes',
       colors: {
         background: 'bg-accent/20',
         text: 'text-accent',
       },
     },
   ],
-  registration: {
-    title: 'Registration Information',
-    info: [
-      {
-        title: 'Ticketing Platform',
-        description: 'Tickets available through Lu.ma and other partner platforms',
-      },
-      {
-        title: 'Ticket Purpose',
-        description: 'Crowd control and attendee verification - all proceeds go to charity',
-      },
-      {
-        title: "What's Included",
-        description: 'Event access, meals, beverages, and all activities',
-      },
-      {
-        title: 'Event Support',
-        description: 'Full crew support: security, catering, technical assistance',
-      },
-    ],
-  },
 };

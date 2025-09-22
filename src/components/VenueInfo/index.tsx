@@ -155,21 +155,6 @@ const VenueInfo = () => {
             );
           })}
         </div>
-
-        {/* Registration & Tickets */}
-        <div className="mt-16 text-center bg-gradient-to-r from-accent/10 to-primary/10 border border-accent/20 rounded-2xl p-8">
-          <h3 className="font-heading font-bold text-2xl mb-4">
-            {venueContent.registration.title}
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm max-w-4xl mx-auto">
-            {venueContent.registration.info.map((item, index) => (
-              <div key={index}>
-                <h4 className="font-semibold text-foreground mb-2">{item.title}</h4>
-                <p className="text-muted-foreground">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );
