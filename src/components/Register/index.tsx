@@ -1,9 +1,25 @@
 import { registrationContent } from '../../constants/registration';
 import { isEventActive, getCurrentEventContent } from '../../constants/eventConfig';
+import { useEffect } from 'react';
 
 const Register = () => {
   const eventActive = isEventActive();
   const currentEvent = getCurrentEventContent();
+
+  // Load Tally script for form embedding
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://tally.so/widgets/embed.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      // Cleanup script on unmount
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
+    };
+  }, []);
 
   // For inactive events, show simple coming soon message
   if (!eventActive) {
@@ -137,225 +153,20 @@ const Register = () => {
           </div>
 
           <div className="card-gaming animate-fade-in delay-400">
-            <form className="space-y-6">
-              {/* Team Information */}
-              <div>
-                <h4 className="font-heading font-semibold text-xl text-primary mb-4 animate-glow-pulse">
-                  Team Information
-                </h4>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label
-                      htmlFor="teamName"
-                      className="font-body text-sm font-medium text-foreground"
-                    >
-                      Team Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="teamName"
-                      name="teamName"
-                      required
-                      className="w-full px-4 py-3 bg-card border border-border rounded-lg focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all duration-300 font-body text-foreground placeholder-muted-foreground"
-                      placeholder="Enter your team name"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label
-                      htmlFor="teamSize"
-                      className="font-body text-sm font-medium text-foreground"
-                    >
-                      Team Size *
-                    </label>
-                    <select
-                      id="teamSize"
-                      name="teamSize"
-                      required
-                      className="w-full px-4 py-3 bg-card border border-border rounded-lg focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all duration-300 font-body text-foreground"
-                    >
-                      <option value="">Select team size</option>
-                      <option value="1">1 Member (Solo)</option>
-                      <option value="2">2 Members</option>
-                      <option value="3">3 Members</option>
-                      <option value="4">4 Members</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-
-              {/* Team Leader Information */}
-              <div>
-                <h4 className="font-heading font-semibold text-xl text-secondary mb-4 animate-glow-pulse">
-                  Team Leader Information
-                </h4>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label
-                      htmlFor="leaderName"
-                      className="font-body text-sm font-medium text-foreground"
-                    >
-                      Full Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="leaderName"
-                      name="leaderName"
-                      required
-                      className="w-full px-4 py-3 bg-card border border-border rounded-lg focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all duration-300 font-body text-foreground placeholder-muted-foreground"
-                      placeholder="Enter your full name"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label
-                      htmlFor="leaderEmail"
-                      className="font-body text-sm font-medium text-foreground"
-                    >
-                      Email Address *
-                    </label>
-                    <input
-                      type="email"
-                      id="leaderEmail"
-                      name="leaderEmail"
-                      required
-                      className="w-full px-4 py-3 bg-card border border-border rounded-lg focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all duration-300 font-body text-foreground placeholder-muted-foreground"
-                      placeholder="Enter your email"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label
-                      htmlFor="leaderPhone"
-                      className="font-body text-sm font-medium text-foreground"
-                    >
-                      Phone Number
-                    </label>
-                    <input
-                      type="tel"
-                      id="leaderPhone"
-                      name="leaderPhone"
-                      className="w-full px-4 py-3 bg-card border border-border rounded-lg focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all duration-300 font-body text-foreground placeholder-muted-foreground"
-                      placeholder="Enter your phone number"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label
-                      htmlFor="experience"
-                      className="font-body text-sm font-medium text-foreground"
-                    >
-                      Experience Level *
-                    </label>
-                    <select
-                      id="experience"
-                      name="experience"
-                      required
-                      className="w-full px-4 py-3 bg-card border border-border rounded-lg focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all duration-300 font-body text-foreground"
-                    >
-                      <option value="">Select experience level</option>
-                      <option value="beginner">Beginner (0-1 years)</option>
-                      <option value="intermediate">Intermediate (2-4 years)</option>
-                      <option value="advanced">Advanced (5+ years)</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-
-              {/* Technical Preferences */}
-              <div>
-                <h4 className="font-heading font-semibold text-xl text-accent mb-4 animate-glow-pulse">
-                  Technical Preferences
-                </h4>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label
-                      htmlFor="technologies"
-                      className="font-body text-sm font-medium text-foreground"
-                    >
-                      Preferred Technologies
-                    </label>
-                    <input
-                      type="text"
-                      id="technologies"
-                      name="technologies"
-                      className="w-full px-4 py-3 bg-card border border-border rounded-lg focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all duration-300 font-body text-foreground placeholder-muted-foreground"
-                      placeholder="e.g., React, Python, AWS, etc."
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label
-                      htmlFor="category"
-                      className="font-body text-sm font-medium text-foreground"
-                    >
-                      Project Category Interest
-                    </label>
-                    <select
-                      id="category"
-                      name="category"
-                      className="w-full px-4 py-3 bg-card border border-border rounded-lg focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all duration-300 font-body text-foreground"
-                    >
-                      <option value="">Select category</option>
-                      <option value="ai-ml">AI/Machine Learning</option>
-                      <option value="web-app">Web Applications</option>
-                      <option value="mobile">Mobile Development</option>
-                      <option value="blockchain">Blockchain/Web3</option>
-                      <option value="iot">IoT/Hardware</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-
-              {/* Additional Information */}
-              <div className="space-y-2">
-                <label
-                  htmlFor="motivation"
-                  className="font-body text-sm font-medium text-foreground"
-                >
-                  What motivates you to participate? (Optional)
-                </label>
-                <textarea
-                  id="motivation"
-                  name="motivation"
-                  rows={4}
-                  className="w-full px-4 py-3 bg-card border border-border rounded-lg focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all duration-300 font-body text-foreground placeholder-muted-foreground resize-none"
-                  placeholder="Tell us what excites you about this hackathon..."
-                />
-              </div>
-
-              {/* Agreement Checkbox */}
-              <div className="flex items-start space-x-3">
-                <input
-                  type="checkbox"
-                  id="terms"
-                  name="terms"
-                  required
-                  className="mt-1 w-4 h-4 text-primary bg-card border-border rounded focus:ring-primary focus:ring-2"
-                />
-                <label htmlFor="terms" className="font-body text-sm text-muted-foreground">
-                  I agree to the{' '}
-                  <a href="#" className="text-primary hover:text-primary/80 underline">
-                    {registrationContent.form.terms.links.terms}
-                  </a>{' '}
-                  and{' '}
-                  <a href="#" className="text-primary hover:text-primary/80 underline">
-                    {registrationContent.form.terms.links.privacy}
-                  </a>
-                  . I understand that this is an application to compete and selection is not
-                  guaranteed.
-                </label>
-              </div>
-
-              {/* Submit Button */}
-              <div className="pt-4">
-                <button
-                  type="submit"
-                  className="btn-neon w-full font-body text-lg py-4 transform hover:scale-105 transition-all duration-300 animate-pulse"
-                >
-                  {registrationContent.form.submit.button}
-                </button>
-                <p className="text-center text-sm text-muted-foreground mt-3">
-                  {registrationContent.form.submit.confirmationText}
-                </p>
-              </div>
-            </form>
+            {/* Tally Form Embed */}
+            <div className="tally-form-container">
+              <iframe
+                data-tally-src={registrationContent.form.tallyFormUrl}
+                loading="lazy"
+                width="100%"
+                height="800"
+                frameBorder="0"
+                marginHeight={0}
+                marginWidth={0}
+                title="Apply to Compete - Hacker Rivals"
+                className="rounded-lg"
+              ></iframe>
+            </div>
           </div>
         </div>
       </div>

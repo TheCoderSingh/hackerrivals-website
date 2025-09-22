@@ -43,6 +43,8 @@ export const registrationContent = {
     title: 'Apply to Compete',
     subtitle:
       'Submit your application below to be considered as a competitor. Selected teams will receive a free ticket code and compete for the $1000 cash prize.',
+    tallyFormId: 'YOUR_FORM_ID', // Replace with your actual Tally form ID
+    tallyFormUrl: 'https://tally.so/r/YOUR_FORM_ID', // Replace with your actual Tally form URL
     sections: {
       team: {
         title: 'Team Information',
