@@ -87,7 +87,7 @@ const Schedule = () => {
         <div className="mt-12 md:mt-16 text-center animate-bounce-in delay-800">
           <div className="inline-block px-6 md:px-8 py-4 md:py-6 bg-card/80 backdrop-blur-md border border-primary rounded-lg shadow-neon hover:scale-105 transition-all duration-300">
             <p className="font-body text-lg md:text-xl text-primary font-semibold">
-              Total Duration: 5 Hours of Pure Innovation, 2hrs of Action
+              Total Duration: 5 Hours of Pure Innovation, 2 hours of Action
             </p>
             <div className="mt-2 w-full bg-muted rounded-full h-2 overflow-hidden">
               <div className="h-full bg-gradient-primary animate-pulse"></div>
