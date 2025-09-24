@@ -173,9 +173,11 @@ const Sponsors = () => {
             <p className="font-body text-base md:text-lg text-muted-foreground mb-6 leading-relaxed">
               {sponsorsContent.callToAction.description}
             </p>
-            <button className="btn-secondary-neon font-body text-lg px-8 py-3 transform hover:scale-105 transition-all duration-300 hover:cursor-pointer">
-              {sponsorsContent.callToAction.button}
-            </button>
+            <a href={sponsorsContent.callToAction.link} target="_blank" rel="noopener noreferrer">
+              <button className="btn-secondary-neon font-body text-lg px-8 py-3 transform hover:scale-105 transition-all duration-300 hover:cursor-pointer">
+                {sponsorsContent.callToAction.button}
+              </button>
+            </a>
           </div>
         </div>
       </div>

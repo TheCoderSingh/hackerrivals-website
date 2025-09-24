@@ -15,5 +15,6 @@ export const sponsorsContent = {
     title: 'Want to Sponsor?',
     description: 'Join us in supporting the next generation of developers and innovators.',
     button: 'Become a Sponsor',
+    link: 'https://tally.so/r/w5RGR6',
   },
 };
