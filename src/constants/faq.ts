@@ -7,7 +7,7 @@ export const faqItems = [
   {
     question: 'How does the eSports competition format work?',
     answer:
-      'Our lightning-fast format has three electrifying rounds: Round 1 - Concept Presentation (12:30 PM, Level 2 Stage) where teams pitch to judges and live audience; Round 2 - MVP Knockout (2:15 PM, Level 2 Stage) - an intense elimination where only 2 teams advance; Round 3 - Championship Final (4:00 PM, Main Stage) with polished presentations, live demos, and the ultimate showdown for $1,000 cash!',
+      'Our lightning-fast format has three electrifying rounds: Round 1 - Concept Presentation, where teams pitch to judges and live audience, Round 2 - MVP Knockout - an intense elimination where only 2 teams advance, Round 3 - Championship Final, with polished presentations, live demos, and the ultimate showdown for a suitcase of prize money!',
   },
   {
     question: 'How can the audience participate in the competition?',
@@ -22,17 +22,17 @@ export const faqItems = [
   {
     question: 'What are the technology requirements and sponsor integrations?',
     answer:
-      "You'll receive AWS credits and a pre-configured development environment. Sponsor technologies like Couchbase are integrated into challenges with bonus points for creative usage. Pre-event education sessions and office hours help you master these tools. Remember: all coding happens live during the event!",
+      "You'll receive cloud hosting credits. Sponsor technologies are integrated into challenges with bonus points for creative usage. Pre-event education sessions and office hours help you master these tools. Remember: all coding happens live during the event!",
   },
   {
     question: 'What entertainment elements can spectators expect?',
     answer:
-      "This is a full production experience! Professional MC with coding knowledge, cosplay-themed cheerleaders and mascot, big screen displays with real-time stats and voting, professional livestreaming, and interactive audience experiences throughout. It's designed to be as exciting as watching your favorite eSports tournament.",
+      "This is a full production experience! Professional MC with coding knowledge, mascot, big screen displays with real-time stats and voting, professional livestreaming, and interactive audience experiences throughout. It's designed to be as exciting as watching your favorite eSports tournament.",
   },
   {
     question: 'What are the prizes and recognition?',
     answer:
-      'Winners receive $1,000 in cash delivered dramatically in a suitcase of $5 bills! Plus sponsor credits, premium swag, custom Funko Pop awards, and VIP recognition at our exclusive rooftop after-party. All participants get networking opportunities, memorable experiences, and bragging rights as pioneers of eSports hackathons.',
+      'Winners receive a suitcase of cash delivered dramatically! Plus sponsor credits, premium swag, highly coveted unique and fun HR Trophy, and recognition with VIP access to after parties and more. All participants get networking opportunities, memorable experiences, and bragging rights as pioneers of eSports hackathons.',
   },
   {
     question: 'Where exactly is the event located?',
@@ -42,17 +42,17 @@ export const faqItems = [
   {
     question: 'How do tickets work and why do you charge?',
     answer:
-      "Tickets are available through Lu.ma and partner platforms. We charge only for crowd control and to ensure attendees are genuinely interested in cloud technology and innovation. This isn't about profit - all proceeds go directly to our nominated charity while ensuring we get engaged, enthusiastic audiences.",
+      "We operate in two formats: When we're part of a larger event, ticket management is handled by the host organization. When we host standalone events, tickets are available through Lu.ma and partner platforms. For our standalone events, we charge only for crowd control and to ensure attendees are genuinely interested in cloud technology and innovation. This isn't about profit - all proceeds go directly to our nominated charity while ensuring we get engaged, enthusiastic audiences.",
   },
   {
     question: 'What amenities and support are provided?',
     answer:
-      'Everything you need for an amazing experience: free food and beverages all day, high-speed WiFi, professional livestreaming setup, educational workshops, sponsor booths and demos, full technical support staff, security, and event coordination. We handle logistics so you can focus on creating and competing.',
+      'Every event is different, but we often provide food and beverages, high-speed WiFi, professional livestreaming setup, educational workshops, sponsor booths and demos, technical support staff, security, and event coordination. We work to ensure you have what you need for an amazing experience while you focus on creating and competing.',
   },
   {
     question: 'How should I prepare for the competition?',
     answer:
-      'Attend our mandatory pre-event office hours and complete self-paced education modules (participation is tracked). Submit any promotional materials via Google Drive beforehand, but remember - all actual development must happen live during the event. The challenge problem will be revealed on competition day for fair play!',
+      'Practice coding with the technologies involved, but remember - all actual development must happen live during the event. The challenge problem will be revealed on competition day for fair play!',
   },
   {
     question: 'What happens if I want to attend as a spectator only?',
