@@ -154,11 +154,18 @@ const Sponsors = () => {
                   )} bg-card rounded-lg flex items-center justify-center font-heading font-bold hover:scale-110 transition-all duration-500 cursor-pointer animate-bounce-in p-4 ${sponsor.tier === 'None' ? 'border-0 bg-white' : 'border'}`}
                   style={{ animationDelay: `${(index + 6) * 0.1}s` }}
                 >
-                  <img
-                    src={sponsor.logo}
-                    alt={`${sponsor.name} logo`}
-                    className="w-full h-full object-contain"
-                  />
+                  <a
+                    href={sponsor.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center w-full h-full"
+                  >
+                    <img
+                      src={sponsor.logo}
+                      alt={`${sponsor.name} logo`}
+                      className="w-full h-full object-contain"
+                    />
+                  </a>
                 </div>
               ))}
           </div>
