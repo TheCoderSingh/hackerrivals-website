@@ -201,6 +201,10 @@ body {
   box-shadow: var(--shadow-neon);
 }
 
+.shadow-purple {
+  box-shadow: var(--shadow-purple);
+}
+
 .text-primary {
   color: hsl(var(--color-primary));
 }
