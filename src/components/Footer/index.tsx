@@ -1,4 +1,4 @@
-import { Github, Mail, Message, Twitter } from 'iconoir-react';
+import { Mail, Message, Twitter } from 'iconoir-react';
 import { navItems } from '../../constants/navbar';
 import { footerContent } from '../../constants/footer';
 import ViewRulesButton from '../ViewRulesButton';
