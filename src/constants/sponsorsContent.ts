@@ -9,6 +9,7 @@ export const sponsorsContent = {
     gold: 'Gold Sponsors',
     silver: 'Silver Sponsors',
     bronze: 'Bronze Sponsors',
+    none: '',
   },
   callToAction: {
     title: 'Want to Sponsor?',

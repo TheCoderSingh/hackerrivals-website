@@ -24,7 +24,7 @@ const Sponsors = () => {
       case 'Silver':
         return 'w-24 h-24 text-lg';
       default:
-        return 'w-20 h-20 text-base';
+        return 'w-64 h-20';
     }
   };
 
@@ -48,7 +48,7 @@ const Sponsors = () => {
         </div>
 
         {/* Platinum Sponsors */}
-        <div className="mb-12 md:mb-16 animate-slide-up delay-400">
+        {/* <div className="mb-12 md:mb-16 animate-slide-up delay-400">
           <h3 className="font-heading font-bold text-xl md:text-2xl text-center mb-8 md:mb-12 text-primary animate-glow-pulse">
             {sponsorsContent.tiers.platinum}
           </h3>
@@ -68,10 +68,10 @@ const Sponsors = () => {
                 </div>
               ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Gold Sponsors */}
-        <div className="mb-12 md:mb-16 animate-slide-up delay-500">
+        {/* <div className="mb-12 md:mb-16 animate-slide-up delay-500">
           <h3 className="font-heading font-bold text-lg md:text-xl text-center mb-8 text-secondary animate-glow-pulse">
             {sponsorsContent.tiers.gold}
           </h3>
@@ -91,10 +91,10 @@ const Sponsors = () => {
                 </div>
               ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Silver Sponsors */}
-        <div className="mb-12 md:mb-16 animate-slide-up delay-600">
+        {/* <div className="mb-12 md:mb-16 animate-slide-up delay-600">
           <h3 className="font-heading font-bold text-base md:text-lg text-center mb-8 text-accent animate-glow-pulse">
             {sponsorsContent.tiers.silver}
           </h3>
@@ -114,10 +114,10 @@ const Sponsors = () => {
                 </div>
               ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Bronze Sponsors */}
-        <div className="mb-12 md:mb-16 animate-slide-up delay-700">
+        {/* <div className="mb-12 md:mb-16 animate-slide-up delay-700">
           <h3 className="font-heading font-bold text-sm md:text-base text-center mb-8 text-muted-foreground">
             {sponsorsContent.tiers.bronze}
           </h3>
@@ -133,6 +133,32 @@ const Sponsors = () => {
                   style={{ animationDelay: `${(index + 6) * 0.1}s` }}
                 >
                   {sponsor.logo}
+                </div>
+              ))}
+          </div>
+        </div> */}
+
+        {/* Sponsors */}
+        <div className="mb-12 md:mb-16 animate-slide-up delay-700">
+          <h3 className="font-heading font-bold text-sm md:text-base text-center mb-8 text-muted-foreground">
+            {sponsorsContent.tiers.none}
+          </h3>
+          <div className="flex justify-center gap-2 md:gap-4 flex-wrap">
+            {sponsors
+              .filter((sponsor) => sponsor.tier === 'None')
+              .map((sponsor, index) => (
+                <div
+                  key={index}
+                  className={`${getTierSize(sponsor.tier)} ${getTierStyle(
+                    sponsor.tier,
+                  )} bg-card rounded-lg flex items-center justify-center font-heading font-bold hover:scale-110 transition-all duration-500 cursor-pointer animate-bounce-in p-4 ${sponsor.tier === 'None' ? 'border-0 bg-white' : 'border'}`}
+                  style={{ animationDelay: `${(index + 6) * 0.1}s` }}
+                >
+                  <img
+                    src={sponsor.logo}
+                    alt={`${sponsor.name} logo`}
+                    className="w-full h-full object-contain"
+                  />
                 </div>
               ))}
           </div>
