@@ -6,6 +6,7 @@ export const navItems = [
   { name: 'Register', href: '#register' },
   { name: 'Sponsors', href: '#sponsors' },
   { name: 'FAQ', href: '#faq' },
+  { name: 'Team', href: '#team' },
 ];
 
 export const navbarContent = {

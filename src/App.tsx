@@ -8,6 +8,7 @@ import VenueInfo from './components/VenueInfo';
 import Register from './components/Register';
 import Sponsors from './components/Sponsors';
 import FAQ from './components/FAQ';
+import Team from './components/Team';
 import Footer from './components/Footer';
 import SEOOptimizations from './components/SEOOptimizations';
 import { isEventActive } from './constants/eventConfig';
@@ -30,6 +31,7 @@ function App() {
         <Register />
         <Sponsors />
         <FAQ />
+        <Team />
       </main>
 
       <footer>
