@@ -1,7 +1,41 @@
-import { Building, MapPin, Car } from 'iconoir-react';
+import { Building, MapPin, Car, Calendar, NavArrowUp } from 'iconoir-react';
 import { venueContent } from '../../constants/venue';
 
 const VenueInfo = () => {
+  // Helper function to open address in default maps app
+  const openInMaps = () => {
+    const address = `${venueContent.mainInfo.address.street}, ${venueContent.mainInfo.address.city}`;
+    const encodedAddress = encodeURIComponent(address);
+
+    // Try to detect the device and open appropriate maps app
+    const userAgent = navigator.userAgent;
+    if (/iPad|iPhone|iPod/.test(userAgent)) {
+      // iOS - try Apple Maps first, fallback to Google Maps
+      window.open(`maps://?q=${encodedAddress}`, '_blank');
+    } else if (/Android/.test(userAgent)) {
+      // Android - open Google Maps
+      window.open(`geo:0,0?q=${encodedAddress}`, '_blank');
+    } else {
+      // Desktop - open Google Maps in browser
+      window.open(`https://maps.google.com/maps?q=${encodedAddress}`, '_blank');
+    }
+  };
+
+  // Helper function to add event to calendar
+  const addToCalendar = () => {
+    const startDate = '20251025T100000'; // October 25, 2025, 10:00 AM
+    const endDate = '20251025T170000'; // October 25, 2025, 5:00 PM
+    const title = encodeURIComponent('Hacker Rivals Competition');
+    const location = encodeURIComponent(
+      `${venueContent.mainInfo.address.street}, ${venueContent.mainInfo.address.city}`,
+    );
+    const details = encodeURIComponent("Join us for the world's first eSports style hackathon!");
+
+    // Create Google Calendar URL
+    const googleCalendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${startDate}/${endDate}&location=${location}&details=${details}`;
+
+    window.open(googleCalendarUrl, '_blank');
+  };
   return (
     <section
       className="py-20 px-4 bg-gradient-to-br from-card via-card/50 to-background"
@@ -30,10 +64,20 @@ const VenueInfo = () => {
                 <div className="flex items-start">
                   <MapPin className="w-5 h-5 text-primary mt-1 mr-3 flex-shrink-0" />
                   <div>
-                    <p className="font-semibold text-foreground">
-                      {venueContent.mainInfo.address.street}
-                    </p>
-                    <p className="text-muted-foreground">{venueContent.mainInfo.address.city}</p>
+                    <button
+                      onClick={openInMaps}
+                      className="text-left group cursor-pointer hover:text-primary transition-all duration-300 p-1 -m-1 rounded hover:bg-primary/5"
+                      aria-label="Open address in maps"
+                      title="Click to open in maps"
+                    >
+                      <p className="font-semibold text-foreground group-hover:text-primary flex items-center">
+                        {venueContent.mainInfo.address.street}
+                        <NavArrowUp className="w-4 h-4 ml-2 rotate-45 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      </p>
+                      <p className="text-muted-foreground group-hover:text-primary/80">
+                        {venueContent.mainInfo.address.city}
+                      </p>
+                    </button>
                   </div>
                 </div>
                 <div className="flex items-center">
@@ -44,11 +88,21 @@ const VenueInfo = () => {
                   </p>
                 </div>
                 <div className="flex items-center">
-                  <div className="w-5 h-5 mr-3 flex-shrink-0"></div>
-                  <p className="text-muted-foreground">
-                    <strong className="text-foreground">{venueContent.mainInfo.labels.time}</strong>{' '}
-                    {venueContent.mainInfo.event.time}
-                  </p>
+                  <Calendar className="w-5 h-5 text-primary mr-3 flex-shrink-0" />
+                  <button
+                    onClick={addToCalendar}
+                    className="text-left group cursor-pointer hover:text-primary transition-all duration-300 p-1 -m-1 rounded hover:bg-primary/5"
+                    aria-label="Add event to calendar"
+                    title="Click to add to calendar"
+                  >
+                    <span className="text-muted-foreground group-hover:text-primary/80">
+                      <strong className="text-foreground group-hover:text-primary">
+                        {venueContent.mainInfo.labels.time}
+                      </strong>{' '}
+                      {venueContent.mainInfo.event.time}
+                      <NavArrowUp className="w-4 h-4 ml-2 rotate-45 opacity-0 group-hover:opacity-100 transition-opacity duration-300 inline" />
+                    </span>
+                  </button>
                 </div>
                 <div className="flex items-center">
                   <div className="w-5 h-5 mr-3 flex-shrink-0"></div>
