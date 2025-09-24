@@ -104,8 +104,7 @@ export const teamMembers: TeamMember[] = [
     id: 'join-team',
     name: 'Could be You',
     role: 'Join Our Team',
-    description:
-      "Interested in being part of future events? We're always looking for passionate individuals to help organize and run amazing gaming experiences.",
+    description: 'Join our team and help create amazing gaming experiences!',
     image: join,
     isJoinCard: true,
   },

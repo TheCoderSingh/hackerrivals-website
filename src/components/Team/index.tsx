@@ -23,147 +23,165 @@ const Team = () => {
           </p>
         </div>
 
-        {/* Team Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16">
+        {/* Team Members - Modern Circular Layout */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 md:gap-12 mb-12 md:mb-16 max-w-7xl mx-auto">
           {teamMembers.map((member, index) => (
             <div
               key={member.id}
-              className={`card-gaming transform hover:scale-105 transition-all duration-500 animate-slide-up relative overflow-hidden group ${
-                member.isJoinCard ? 'border-dashed border-2 border-accent' : ''
-              }`}
+              className="group flex flex-col items-center text-center animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Cyberpunk glow effect */}
-              <div
-                className={`absolute inset-0 ${
-                  member.isJoinCard ? 'bg-gradient-secondary' : 'bg-gradient-primary'
-                } opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
-              ></div>
-              <div
-                className={`absolute top-0 left-0 w-full h-1 bg-gradient-primary opacity-60`}
-              ></div>
+              {/* Circular Avatar with Cyberpunk Glow */}
+              <div className="relative mb-4">
+                <div
+                  className={`relative w-32 h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 mx-auto rounded-full overflow-hidden border-3 transition-all duration-500 ${
+                    member.isJoinCard
+                      ? 'border-accent shadow-neon-accent group-hover:shadow-neon-accent-lg'
+                      : 'border-primary shadow-neon group-hover:shadow-neon-lg'
+                  }`}
+                >
+                  {/* Rotating border animation */}
+                  <div
+                    className={`absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 ${
+                      member.isJoinCard ? 'bg-gradient-conic-accent' : 'bg-gradient-conic-primary'
+                    } animate-spin-slow`}
+                  ></div>
 
-              {/* Profile Image Placeholder */}
-              <div className="relative mb-6">
-                {member.image ? (
-                  <div className="relative">
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className={`w-64 h-64 mx-auto rounded-lg object-cover border-2 shadow-neon ${
-                        member.isJoinCard ? 'object-top' : 'border-primary'
-                      }`}
-                    />
-                    {member.isJoinCard && (
-                      <div className="absolute inset-0 bg-gradient-to-br from-accent/20 via-transparent to-secondary/30 rounded-lg"></div>
+                  {/* Inner image container */}
+                  <div className="absolute inset-1 rounded-full overflow-hidden bg-card">
+                    {member.image ? (
+                      <img
+                        src={member.image}
+                        alt={member.name}
+                        className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 ${
+                          member.isJoinCard ? 'object-top' : ''
+                        }`}
+                      />
+                    ) : (
+                      <div
+                        className={`w-full h-full flex items-center justify-center text-4xl lg:text-6xl opacity-60 ${
+                          member.isJoinCard ? 'bg-gradient-secondary' : 'bg-gradient-primary'
+                        }`}
+                      >
+                        ?
+                      </div>
                     )}
                   </div>
-                ) : (
+
+                  {/* Hover overlay with role */}
                   <div
-                    className={`w-64 h-64 mx-auto rounded-lg border-2 shadow-neon flex items-center justify-center ${
-                      member.isJoinCard
-                        ? 'bg-gradient-secondary border-accent opacity-50'
-                        : 'bg-gradient-primary border-primary opacity-30'
-                    }`}
+                    className={`absolute inset-0 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${
+                      member.isJoinCard ? 'bg-accent/20' : 'bg-primary/20'
+                    } backdrop-blur-sm`}
                   >
-                    {member.isJoinCard && <div className="text-6xl opacity-60">?</div>}
+                    <span
+                      className={`font-body font-semibold text-xs uppercase tracking-wider ${
+                        member.isJoinCard ? 'text-accent' : 'text-primary'
+                      }`}
+                    >
+                      {member.role}
+                    </span>
                   </div>
-                )}
+                </div>
+
+                {/* Pulsing ring effect */}
+                <div
+                  className={`absolute inset-0 w-32 h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 mx-auto rounded-full opacity-20 group-hover:opacity-40 transition-opacity duration-500 ${
+                    member.isJoinCard ? 'bg-accent' : 'bg-primary'
+                  } animate-ping`}
+                ></div>
               </div>
 
               {/* Member Info */}
-              <div className="text-center relative z-10">
-                <h3
-                  className={`font-heading font-bold text-xl mb-2 animate-glow-pulse ${
-                    member.isJoinCard ? 'text-accent' : 'text-primary'
-                  }`}
-                >
-                  {member.name}
-                </h3>
-                <p
-                  className={`font-body font-semibold text-sm mb-3 uppercase tracking-wider ${
-                    member.isJoinCard ? 'text-accent' : 'text-secondary'
-                  }`}
-                >
-                  {member.role}
-                </p>
-                <p className="font-body text-muted-foreground text-sm leading-relaxed mb-4">
-                  {member.description}
-                </p>
+              <div className="flex flex-col h-48 md:h-52 space-y-3">
+                {/* Name - Fixed height with first/last name on separate lines */}
+                <div className="h-16 flex items-center justify-center">
+                  <h3
+                    className={`font-heading font-bold text-lg md:text-xl transition-colors duration-300 text-center leading-tight ${
+                      member.isJoinCard
+                        ? 'text-accent group-hover:text-accent'
+                        : 'text-white group-hover:text-primary'
+                    }`}
+                  >
+                    {member.isJoinCard
+                      ? member.name
+                      : member.name
+                          .split(' ')
+                          .map((namePart, index) => <div key={index}>{namePart}</div>)}
+                  </h3>
+                </div>
 
-                {/* Join button for the join card */}
-                {member.isJoinCard && (
-                  <button className="btn-secondary-neon font-body text-sm px-6 py-2 transform hover:scale-105 transition-all duration-300 hover:cursor-pointer">
-                    Join Our Team
-                  </button>
-                )}
+                {/* Description - Flexible height */}
+                <div className="flex-1 flex items-start justify-center px-2">
+                  <p className="font-body text-muted-foreground text-xs md:text-sm leading-relaxed max-w-44 md:max-w-48 lg:max-w-52 mx-auto text-center">
+                    {member.description}
+                  </p>
+                </div>
 
-                {/* Social Links */}
-                {member.social && (
-                  <div className="flex justify-center gap-3 mt-4">
-                    {member.social.linkedin && (
-                      <a
-                        href={member.social.linkedin}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-10 h-10 bg-card border border-muted-foreground rounded-lg flex items-center justify-center hover:border-primary hover:text-primary transition-colors duration-300 hover:shadow-neon"
-                      >
-                        <Linkedin width="1.2em" height="1.2em" />
-                      </a>
-                    )}
-                    {member.social.github && (
-                      <a
-                        href={member.social.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-10 h-10 bg-card border border-muted-foreground rounded-lg flex items-center justify-center hover:border-primary hover:text-primary transition-colors duration-300 hover:shadow-neon"
-                      >
-                        <Github width="1.2em" height="1.2em" />
-                      </a>
-                    )}
-                    {member.social.portfolio && (
-                      <a
-                        href={member.social.portfolio}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-10 h-10 bg-card border border-muted-foreground rounded-lg flex items-center justify-center hover:border-primary hover:text-primary transition-colors duration-300 hover:shadow-neon"
-                      >
-                        <Link width="1.2em" height="1.2em" />
-                      </a>
-                    )}
-                    {member.social.x && (
-                      <a
-                        href={member.social.x}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-10 h-10 bg-card border border-muted-foreground rounded-lg flex items-center justify-center hover:border-primary hover:text-primary transition-colors duration-300 hover:shadow-neon"
-                      >
-                        <X width="1.2em" height="1.2em" />
-                      </a>
-                    )}
-                    {member.social.email && (
-                      <a
-                        href={`mailto:${member.social.email}`}
-                        className="w-10 h-10 bg-card border border-muted-foreground rounded-lg flex items-center justify-center hover:border-primary hover:text-primary transition-colors duration-300 hover:shadow-neon"
-                      >
-                        <Mail width="1.2em" height="1.2em" />
-                      </a>
-                    )}
-                  </div>
-                )}
+                {/* Action buttons and Social - Fixed position at bottom */}
+                <div className="flex flex-col items-center gap-3 mt-auto">
+                  {/* Join button for the join card */}
+                  {member.isJoinCard && (
+                    <button className="btn-secondary-neon font-body text-xs px-4 py-1 transform hover:scale-105 transition-all duration-300 hover:cursor-pointer">
+                      Join Us
+                    </button>
+                  )}
+
+                  {/* Social Links - Always at bottom */}
+                  {member.social && (
+                    <div className="flex justify-center gap-2 opacity-100 transition-opacity duration-300">
+                      {member.social.linkedin && (
+                        <a
+                          href={member.social.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-8 h-8 bg-card/50 border border-muted-foreground/50 rounded-full flex items-center justify-center hover:border-primary hover:text-primary transition-colors duration-300 hover:shadow-neon backdrop-blur-sm"
+                        >
+                          <Linkedin width="1em" height="1em" />
+                        </a>
+                      )}
+                      {member.social.github && (
+                        <a
+                          href={member.social.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-8 h-8 bg-card/50 border border-muted-foreground/50 rounded-full flex items-center justify-center hover:border-primary hover:text-primary transition-colors duration-300 hover:shadow-neon backdrop-blur-sm"
+                        >
+                          <Github width="1em" height="1em" />
+                        </a>
+                      )}
+                      {member.social.portfolio && (
+                        <a
+                          href={member.social.portfolio}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-8 h-8 bg-card/50 border border-muted-foreground/50 rounded-full flex items-center justify-center hover:border-primary hover:text-primary transition-colors duration-300 hover:shadow-neon backdrop-blur-sm"
+                        >
+                          <Link width="1em" height="1em" />
+                        </a>
+                      )}
+                      {member.social.x && (
+                        <a
+                          href={member.social.x}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-8 h-8 bg-card/50 border border-muted-foreground/50 rounded-full flex items-center justify-center hover:border-primary hover:text-primary transition-colors duration-300 hover:shadow-neon backdrop-blur-sm"
+                        >
+                          <X width="1em" height="1em" />
+                        </a>
+                      )}
+                      {member.social.email && (
+                        <a
+                          href={`mailto:${member.social.email}`}
+                          className="w-8 h-8 bg-card/50 border border-muted-foreground/50 rounded-full flex items-center justify-center hover:border-primary hover:text-primary transition-colors duration-300 hover:shadow-neon backdrop-blur-sm"
+                        >
+                          <Mail width="1em" height="1em" />
+                        </a>
+                      )}
+                    </div>
+                  )}
+                </div>
               </div>
-
-              {/* Cyberpunk corner accents */}
-              <div
-                className={`absolute top-2 right-2 w-4 h-4 border-t-2 border-r-2 opacity-60 ${
-                  member.isJoinCard ? 'border-accent' : 'border-accent'
-                }`}
-              ></div>
-              <div
-                className={`absolute bottom-2 left-2 w-4 h-4 border-b-2 border-l-2 opacity-60 ${
-                  member.isJoinCard ? 'border-accent' : 'border-accent'
-                }`}
-              ></div>
             </div>
           ))}
         </div>

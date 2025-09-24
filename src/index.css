@@ -339,3 +339,28 @@ body {
   background: var(--gradient-primary);
   border-radius: 0.75rem 0.75rem 0 0;
 }
+
+/* Team Member Circular Effects */
+.shadow-neon-accent {
+  box-shadow: 0 0 20px hsl(var(--color-accent) / 0.5);
+}
+
+.shadow-neon-accent-lg {
+  box-shadow: 0 0 40px hsl(var(--color-accent) / 0.7);
+}
+
+.shadow-neon-lg {
+  box-shadow: 0 0 40px hsl(var(--color-primary) / 0.7);
+}
+
+.bg-gradient-conic-primary {
+  background: conic-gradient(from 0deg, transparent, hsl(var(--color-primary) / 0.3), transparent);
+}
+
+.bg-gradient-conic-accent {
+  background: conic-gradient(from 0deg, transparent, hsl(var(--color-accent) / 0.3), transparent);
+}
+
+.animate-spin-slow {
+  animation: spin 3s linear infinite;
+}
