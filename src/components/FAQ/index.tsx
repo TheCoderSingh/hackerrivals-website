@@ -1,5 +1,6 @@
 import Accordion from '../Accordion';
 import { faqItems } from '../../constants/faq';
+import ViewRulesButton from '../ViewRulesButton';
 
 const FAQ = () => {
   return (
@@ -23,6 +24,15 @@ const FAQ = () => {
 
         <div className="card-gaming animate-slide-up delay-400">
           <Accordion items={faqItems} />
+        </div>
+
+        <div className="text-center mt-8 animate-fade-in delay-600">
+          <p className="font-body text-muted-foreground mb-4">
+            Need more details about competition rules and guidelines?
+          </p>
+          <ViewRulesButton variant="primary" size="lg">
+            View Complete Rules & Guidelines
+          </ViewRulesButton>
         </div>
       </div>
     </section>

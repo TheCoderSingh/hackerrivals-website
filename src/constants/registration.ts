@@ -118,10 +118,11 @@ export const registrationContent = {
       },
     },
     terms: {
-      text: 'I agree to the Terms and Conditions and Privacy Policy. I understand that this is an application to compete and selection is not guaranteed.',
+      text: 'I agree to the Terms and Conditions, Privacy Policy, and Competition Rules. I understand that this is an application to compete and selection is not guaranteed.',
       links: {
         terms: 'Terms and Conditions',
         privacy: 'Privacy Policy',
+        rules: 'Competition Rules',
       },
     },
     submit: {

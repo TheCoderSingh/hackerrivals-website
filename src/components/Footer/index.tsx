@@ -1,6 +1,7 @@
 import { Github, Mail, Message, Twitter } from 'iconoir-react';
 import { navItems } from '../../constants/navbar';
 import { footerContent } from '../../constants/footer';
+import ViewRulesButton from '../ViewRulesButton';
 
 const Footer = () => {
   return (
@@ -79,16 +80,22 @@ const Footer = () => {
         <div className="pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="font-body text-muted-foreground">{footerContent.bottom.copyright}</p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              {footerContent.bottom.links.map((link, index) => (
-                <a
-                  key={index}
-                  href={link.href}
-                  className="font-body text-muted-foreground hover:text-primary transition-colors duration-300"
-                >
-                  {link.name}
-                </a>
-              ))}
+            <div className="flex flex-wrap items-center gap-4 mt-4 md:mt-0">
+              {footerContent.bottom.links.map((link, index) =>
+                link.isModal ? (
+                  <ViewRulesButton key={index} size="sm" variant="outline">
+                    {link.name}
+                  </ViewRulesButton>
+                ) : (
+                  <a
+                    key={index}
+                    href={link.href}
+                    className="font-body text-muted-foreground hover:text-primary transition-colors duration-300"
+                  >
+                    {link.name}
+                  </a>
+                ),
+              )}
             </div>
           </div>
         </div>

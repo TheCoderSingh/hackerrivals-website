@@ -74,7 +74,7 @@ const Navbar = () => {
                 </a>
               ))}
               <button
-                className="btn-neon font-body text-sm lg:text-base px-4 lg:px-6 py-2 lg:py-3 animate-pulse h-10 bg-primary text-primary-foreground hover:bg-primary/90 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md w-full mt-4 animate-bounce-in delay-500"
+                className="btn-neon font-body text-sm lg:text-base px-4 lg:px-6 py-2 lg:py-3 animate-pulse h-10 bg-primary text-primary-foreground hover:bg-primary/90 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md w-full animate-bounce-in delay-500"
                 onClick={() => {
                   const el = document.getElementById('register');
                   if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });

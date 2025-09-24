@@ -1,6 +1,7 @@
 import { registrationContent } from '../../constants/registration';
 import { isEventActive, getCurrentEventContent } from '../../constants/eventConfig';
 import { useEffect } from 'react';
+import ViewRulesButton from '../ViewRulesButton';
 
 const Register = () => {
   const eventActive = isEventActive();
@@ -150,6 +151,11 @@ const Register = () => {
             <p className="font-body text-base md:text-lg text-muted-foreground animate-fade-in delay-300">
               {registrationContent.form.subtitle}
             </p>
+            <div className="mt-6 animate-fade-in delay-500">
+              <ViewRulesButton variant="outline" size="md">
+                📋 Read Competition Rules First
+              </ViewRulesButton>
+            </div>
           </div>
 
           <div className="card-gaming animate-fade-in delay-400">
