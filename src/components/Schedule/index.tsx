@@ -30,9 +30,7 @@ const Schedule = () => {
               Get Attendee Tickets
             </a>
             <a
-              href="https://tally.so/r/your-form-id"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#register"
               className="inline-flex items-center px-6 py-3 bg-secondary/10 hover:bg-secondary/20 border border-secondary rounded-lg text-secondary font-semibold transition-all duration-300 hover:scale-105"
             >
               Enter Competition

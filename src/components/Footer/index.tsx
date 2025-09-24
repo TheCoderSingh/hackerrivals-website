@@ -3,6 +3,7 @@ import { navItems } from '../../constants/navbar';
 import { footerContent } from '../../constants/footer';
 import ViewRulesButton from '../ViewRulesButton';
 import ViewCodeOfConductButton from '../ViewCodeOfConductButton';
+import { isEventActive } from '../../constants/eventConfig';
 
 const Footer = () => {
   return (
@@ -18,9 +19,6 @@ const Footer = () => {
               {footerContent.brand.description}
             </p>
             <div className="flex space-x-4">
-              <a href="#" aria-label="GitHub">
-                <Github className="hover:text-primary transition-colors duration-300 text-muted-foreground" />
-              </a>
               <a href="#" aria-label="Twitter">
                 <Twitter className="hover:text-primary transition-colors duration-300 text-muted-foreground" />
               </a>
@@ -38,31 +36,47 @@ const Footer = () => {
             <h3 className="font-body font-bold text-lg mb-4 text-foreground">
               {footerContent.quickLinks.title}
             </h3>
-            <ul className="space-y-2 font-body">
-              {navItems.map((item) => (
-                <li key={item.name}>
-                  <a
-                    href={`#${item.href}`}
-                    className="text-muted-foreground hover:text-primary transition-colors duration-300"
-                  >
-                    {item.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
+            <div className="grid grid-cols-2 gap-x-4">
+              <ul className="space-y-2 font-body">
+                {navItems.slice(0, 4).map((item) => (
+                  <li key={item.name}>
+                    <a
+                      href={`${item.href}`}
+                      className="text-muted-foreground hover:text-primary transition-colors duration-300"
+                    >
+                      {item.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              <ul className="space-y-2 font-body">
+                {navItems.slice(4, 8).map((item) => (
+                  <li key={item.name}>
+                    <a
+                      href={`${item.href}`}
+                      className="text-muted-foreground hover:text-primary transition-colors duration-300"
+                    >
+                      {item.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           {/* Event Info */}
-          <div>
-            <h3 className="font-body font-bold text-lg mb-4 text-foreground">
-              {footerContent.eventInfo.title}
-            </h3>
-            <ul className="space-y-2 font-body text-muted-foreground">
-              {footerContent.eventInfo.items.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-          </div>
+          {isEventActive() && (
+            <div>
+              <h3 className="font-body font-bold text-lg mb-4 text-foreground">
+                {footerContent.eventInfo.title}
+              </h3>
+              <ul className="space-y-2 font-body text-muted-foreground">
+                {footerContent.eventInfo.items.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          )}
 
           {/* Contact */}
           <div>
