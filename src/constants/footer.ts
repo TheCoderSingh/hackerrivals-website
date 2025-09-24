@@ -40,8 +40,8 @@ export const footerContent = {
     links: [
       { name: 'Privacy Policy', href: '#' },
       { name: 'Terms of Service', href: '#' },
-      { name: 'Competition Rules', href: '#rules', isModal: true },
-      { name: 'Code of Conduct', href: '#' },
+      { name: 'Competition Rules', href: '#rules', isModal: true, modalType: 'rules' },
+      { name: 'Code of Conduct', href: '#conduct', isModal: true, modalType: 'conduct' },
     ],
   },
   social: {

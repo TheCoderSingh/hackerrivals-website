@@ -1,6 +1,7 @@
 import Accordion from '../Accordion';
 import { faqItems } from '../../constants/faq';
 import ViewRulesButton from '../ViewRulesButton';
+import ViewCodeOfConductButton from '../ViewCodeOfConductButton';
 
 const FAQ = () => {
   return (
@@ -28,11 +29,16 @@ const FAQ = () => {
 
         <div className="text-center mt-8 animate-fade-in delay-600">
           <p className="font-body text-muted-foreground mb-4">
-            Need more details about competition rules and guidelines?
+            Need more details about competition rules and community guidelines?
           </p>
-          <ViewRulesButton variant="primary" size="lg">
-            View Complete Rules & Guidelines
-          </ViewRulesButton>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <ViewRulesButton variant="primary" size="lg">
+              View Competition Rules
+            </ViewRulesButton>
+            <ViewCodeOfConductButton variant="secondary" size="lg">
+              View Code of Conduct
+            </ViewCodeOfConductButton>
+          </div>
         </div>
       </div>
     </section>

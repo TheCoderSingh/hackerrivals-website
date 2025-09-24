@@ -2,6 +2,7 @@ import { Github, Mail, Message, Twitter } from 'iconoir-react';
 import { navItems } from '../../constants/navbar';
 import { footerContent } from '../../constants/footer';
 import ViewRulesButton from '../ViewRulesButton';
+import ViewCodeOfConductButton from '../ViewCodeOfConductButton';
 
 const Footer = () => {
   return (
@@ -83,9 +84,15 @@ const Footer = () => {
             <div className="flex flex-wrap items-center gap-4 mt-4 md:mt-0">
               {footerContent.bottom.links.map((link, index) =>
                 link.isModal ? (
-                  <ViewRulesButton key={index} size="sm" variant="outline">
-                    {link.name}
-                  </ViewRulesButton>
+                  link.modalType === 'rules' ? (
+                    <ViewRulesButton key={index} size="sm" variant="outline">
+                      {link.name}
+                    </ViewRulesButton>
+                  ) : (
+                    <ViewCodeOfConductButton key={index} size="sm" variant="outline">
+                      {link.name}
+                    </ViewCodeOfConductButton>
+                  )
                 ) : (
                   <a
                     key={index}
