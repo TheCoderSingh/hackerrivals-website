@@ -42,7 +42,10 @@ describe('AccordionItem', () => {
       />,
     );
 
-    expect(screen.queryByText('This is a test answer.')).not.toBeInTheDocument();
+    const answerElement = screen.getByText('This is a test answer.');
+    // Should be collapsed
+    const container = answerElement.closest('[class*="max-h-0"]');
+    expect(container).toBeInTheDocument();
   });
 
   it('should show answer when open', () => {

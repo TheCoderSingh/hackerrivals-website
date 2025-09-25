@@ -39,9 +39,14 @@ describe('Accordion', () => {
   it('should show closed state initially', () => {
     renderWithProvider(<Accordion items={mockItems} />);
 
-    // Answers should not be visible initially
+    // Answers should not be visible initially - check for collapsed state
     mockItems.forEach((item) => {
-      expect(screen.queryByText(item.answer)).not.toBeInTheDocument();
+      const answerElement = screen.getByText(item.answer);
+      // The answer should be in the DOM but in a collapsed container
+      expect(answerElement).toBeInTheDocument();
+      // Find the accordion container with transition classes
+      const container = answerElement.closest('[class*="max-h-0"]');
+      expect(container).toBeInTheDocument();
     });
   });
 
@@ -67,7 +72,10 @@ describe('Accordion', () => {
 
     // Close
     await user.click(firstQuestion);
-    expect(screen.queryByText(mockItems[0].answer)).not.toBeInTheDocument();
+    const firstAnswerElement = screen.getByText(mockItems[0].answer);
+    // Should be collapsed again
+    const container = firstAnswerElement.closest('[class*="max-h-0"]');
+    expect(container).toBeInTheDocument();
   });
 
   it('should only allow one item to be open at a time', async () => {
@@ -83,8 +91,15 @@ describe('Accordion', () => {
 
     // Open second item
     await user.click(secondQuestion);
-    expect(screen.getByText(mockItems[1].answer)).toBeInTheDocument();
-    expect(screen.queryByText(mockItems[0].answer)).not.toBeInTheDocument();
+    const secondAnswerElement = screen.getByText(mockItems[1].answer);
+    // Second answer should be expanded
+    const expandedContainer = secondAnswerElement.closest('[class*="max-h-96"]');
+    expect(expandedContainer).toBeInTheDocument();
+
+    // First answer should now be hidden (collapsed)
+    const firstAnswerElement = screen.getByText(mockItems[0].answer);
+    const collapsedContainer = firstAnswerElement.closest('[class*="max-h-0"]');
+    expect(collapsedContainer).toBeInTheDocument();
   });
 
   it('should handle empty items array', () => {

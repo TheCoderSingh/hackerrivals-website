@@ -40,7 +40,8 @@ describe('NotFound', () => {
   it('should render 404 error page', () => {
     renderWithProvider(<NotFound />);
 
-    expect(screen.getByText(/404/)).toBeInTheDocument();
+    // Use getByRole for the main heading instead of text search that matches multiple elements
+    expect(screen.getByRole('heading', { name: '404' })).toBeInTheDocument();
     expect(screen.getByText(/Page Not Found/i)).toBeInTheDocument();
   });
 
@@ -100,7 +101,7 @@ describe('NotFound', () => {
     renderWithProvider(<NotFound />);
 
     expect(
-      screen.getByText(/looks like you've ventured into uncharted territory/i),
+      screen.getByText(/it looks like you've wandered into uncharted territory/i),
     ).toBeInTheDocument();
   });
 

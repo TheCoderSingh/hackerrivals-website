@@ -36,8 +36,8 @@ describe('App', () => {
     expect(screen.getByRole('main')).toBeInTheDocument();
 
     // Check for specific section content that should always be present
-    expect(screen.getByText(/HACKER/)).toBeInTheDocument();
-    expect(screen.getByText(/RIVALS/)).toBeInTheDocument();
+    expect(screen.getAllByText(/HACKER/).length).toBeGreaterThan(0);
+    expect(screen.getAllByText(/RIVALS/).length).toBeGreaterThan(0);
   });
 
   it('should show NotFound component when route is #/404', () => {
@@ -50,7 +50,7 @@ describe('App', () => {
     renderApp();
 
     // Should show 404 content instead of main app content
-    expect(screen.getByText(/404/)).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: '404' })).toBeInTheDocument();
     expect(screen.queryByRole('main')).not.toBeInTheDocument();
   });
 
