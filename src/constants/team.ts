@@ -1,5 +1,5 @@
 import jaskaran from '../assets/jaskaran.png';
-import matt from '../assets/matt.jpg';
+import matt from '../assets/matt.png';
 import milad from '../assets/milad.jpg';
 import ade from '../assets/ade.jpg';
 import rohan from '../assets/rohan.png';
