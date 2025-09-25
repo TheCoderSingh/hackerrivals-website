@@ -44,6 +44,11 @@ export const footerContent = {
       { name: 'Code of Conduct', href: '#conduct', isModal: true, modalType: 'conduct' },
     ],
   },
+  creator: {
+    text: 'Website created by',
+    name: 'Jaskaran Singh',
+    url: 'https://thecodersingh.com/',
+  },
   social: {
     email: 'info@hackerrivals.com',
     links: [

@@ -94,7 +94,20 @@ const Footer = () => {
         {/* Bottom */}
         <div className="pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="font-body text-muted-foreground">{footerContent.bottom.copyright}</p>
+            <div className="flex flex-col items-center md:items-start">
+              <p className="font-body text-muted-foreground">{footerContent.bottom.copyright}</p>
+              <p className="font-body text-muted-foreground text-sm mt-1">
+                {footerContent.creator.text}{' '}
+                <a
+                  href={footerContent.creator.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:text-primary/80 transition-colors duration-300"
+                >
+                  {footerContent.creator.name}
+                </a>
+              </p>
+            </div>
             <div className="flex flex-wrap items-center gap-4 mt-4 md:mt-0">
               {footerContent.bottom.links.map((link, index) =>
                 link.isModal ? (
