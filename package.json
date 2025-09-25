@@ -10,7 +10,11 @@
     "preview": "vite preview",
     "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css}\"",
     "generate:sitemap": "node scripts/generate-sitemap.js",
-    "seo:audit": "echo 'Run lighthouse CI or similar SEO audit tools here'"
+    "seo:audit": "echo 'Run lighthouse CI or similar SEO audit tools here'",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.13",
@@ -22,19 +26,25 @@
   "devDependencies": {
     "@eslint/js": "^9.35.0",
     "@nabla/vite-plugin-eslint": "^2.0.6",
+    "@testing-library/jest-dom": "^6.8.0",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
     "@types/react": "^19.1.13",
     "@types/react-dom": "^19.1.9",
     "@vitejs/plugin-react": "^5.0.2",
+    "@vitest/ui": "^3.2.4",
     "eslint": "^9.35.0",
     "eslint-plugin-prettier": "^5.5.4",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.4.0",
+    "jsdom": "^27.0.0",
     "prettier": "^3.6.2",
     "terser": "^5.44.0",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.43.0",
     "vite": "^7.1.6",
-    "vite-plugin-eslint": "^1.8.1"
+    "vite-plugin-eslint": "^1.8.1",
+    "vitest": "^3.2.4"
   }
 }
