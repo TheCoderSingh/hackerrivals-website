@@ -55,5 +55,5 @@ export default defineConfig({
     open: true,
   },
   // Define base URL for deployment
-  base: '/hackerrivals-website/',
+  base: '/',
 });
