@@ -4,6 +4,7 @@ import milad from '../assets/milad.jpg';
 import ade from '../assets/ade.jpg';
 import rohan from '../assets/rohan.png';
 import join from '../assets/join.jpg';
+import neha from '../assets/neha.png';
 
 export interface TeamMember {
   id: string;
@@ -19,13 +20,14 @@ export interface TeamMember {
     email?: string;
     portfolio?: string;
   };
+  href?: string;
 }
 
 export const teamContent = {
   header: {
     title: 'Meet the Team',
     subtitle:
-      'The cyberpunk warriors behind Hacker Rivals - passionate developers, designers, and organizers bringing this epic gaming experience to life.',
+      'The cyberpunk warriors behind Hacker Rivals - passionate developers, designers, and organizers bringing this epic hackathon experience to life.',
   },
 };
 
@@ -63,13 +65,27 @@ export const teamMembers: TeamMember[] = [
     name: 'Milad Tajvidi',
     role: 'Contestants',
     description:
-      'Managing contestant registrations, ensuring a smooth sign-up process, and handling all participant communications.',
+      'Managing registrations, ensuring a smooth sign-up process, and handling all participant communications.',
     image: milad,
     social: {
       linkedin: 'https://www.linkedin.com/in/miladtajvidi/',
       github: 'https://github.com/miladtajvidi',
       x: 'https://x.com/miladtajvidi',
       email: 'milad.tajvidi@gmail.com',
+    },
+  },
+  {
+    id: 'ui-ux',
+    name: 'Neharika Sidda',
+    role: 'UI/UX Designer',
+    description:
+      'Crafting intuitive and engaging user interfaces to enhance the overall experience for our events.',
+    image: neha,
+    social: {
+      linkedin: 'https://www.linkedin.com/in/neharikasidda/',
+      portfolio: 'https://neharikasidda.com/',
+      x: 'https://x.com/neharikasidda',
+      email: 'neharika@hackerrivals.com',
     },
   },
   {
@@ -107,5 +123,6 @@ export const teamMembers: TeamMember[] = [
     description: 'Join our team and help create amazing gaming experiences!',
     image: join,
     isJoinCard: true,
+    href: 'https://tally.so/r/mOvb6Y',
   },
 ];

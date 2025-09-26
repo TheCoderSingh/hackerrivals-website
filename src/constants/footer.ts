@@ -45,9 +45,16 @@ export const footerContent = {
     ],
   },
   creator: {
-    text: 'Website created by',
-    name: 'Jaskaran Singh',
-    url: 'https://thecodersingh.com/',
+    website: {
+      text: 'Website created by',
+      name: 'Jaskaran Singh',
+      url: 'https://thecodersingh.com/',
+    },
+    design: {
+      text: 'UI/UX Design by',
+      name: 'Neharika Sidda',
+      url: 'https://neharikasidda.com/',
+    },
   },
   social: {
     email: 'info@hackerrivals.com',

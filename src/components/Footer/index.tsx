@@ -96,17 +96,31 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex flex-col items-center md:items-start">
               <p className="font-body text-muted-foreground">{footerContent.bottom.copyright}</p>
-              <p className="font-body text-muted-foreground text-sm mt-1">
-                {footerContent.creator.text}{' '}
-                <a
-                  href={footerContent.creator.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-primary hover:text-primary/80 transition-colors duration-300"
-                >
-                  {footerContent.creator.name}
-                </a>
-              </p>
+              <div className="flex flex-col sm:flex-row items-center md:items-start gap-1 sm:gap-4 mt-1">
+                <p className="font-body text-muted-foreground text-sm">
+                  {footerContent.creator.website.text}{' '}
+                  <a
+                    href={footerContent.creator.website.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-primary/80 transition-colors duration-300"
+                  >
+                    {footerContent.creator.website.name}
+                  </a>
+                </p>
+                <span className="hidden sm:inline font-body text-muted-foreground text-sm">•</span>
+                <p className="font-body text-muted-foreground text-sm">
+                  {footerContent.creator.design.text}{' '}
+                  <a
+                    href={footerContent.creator.design.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-primary/80 transition-colors duration-300"
+                  >
+                    {footerContent.creator.design.name}
+                  </a>
+                </p>
+              </div>
             </div>
             <div className="flex flex-wrap items-center gap-4 mt-4 md:mt-0">
               {footerContent.bottom.links.map((link, index) =>

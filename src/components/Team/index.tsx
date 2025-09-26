@@ -11,7 +11,7 @@ const Team = () => {
         <div className="absolute top-2/3 left-1/4 w-40 h-40 bg-primary rounded-full blur-xl animate-pulse delay-500" />
       </div>
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-8xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
           <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl mb-4 text-glow animate-fade-in">
@@ -24,7 +24,7 @@ const Team = () => {
         </div>
 
         {/* Team Members - Modern Circular Layout */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 md:gap-12 mb-12 md:mb-16 max-w-7xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-6 md:gap-8 lg:gap-8 xl:gap-12 mb-12 md:mb-16 max-w-7xl mx-auto">
           {teamMembers.map((member, index) => (
             <div
               key={member.id}
@@ -34,7 +34,7 @@ const Team = () => {
               {/* Circular Avatar with Cyberpunk Glow */}
               <div className="relative mb-4">
                 <div
-                  className={`relative w-32 h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 mx-auto rounded-full overflow-hidden border-3 transition-all duration-500 ${
+                  className={`relative w-28 h-28 md:w-36 md:h-36 lg:w-36 lg:h-36 xl:w-40 xl:h-40 mx-auto rounded-full overflow-hidden border-3 transition-all duration-500 ${
                     member.isJoinCard
                       ? 'border-accent shadow-neon-accent group-hover:shadow-neon-accent-lg'
                       : 'border-primary shadow-neon group-hover:shadow-neon-lg'
@@ -86,18 +86,18 @@ const Team = () => {
 
                 {/* Pulsing ring effect */}
                 <div
-                  className={`absolute inset-0 w-32 h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 mx-auto rounded-full opacity-20 group-hover:opacity-40 transition-opacity duration-500 ${
+                  className={`absolute inset-0 w-28 h-28 md:w-36 md:h-36 lg:w-36 lg:h-36 xl:w-40 xl:h-40 mx-auto rounded-full opacity-20 group-hover:opacity-40 transition-opacity duration-500 ${
                     member.isJoinCard ? 'bg-accent' : 'bg-primary'
                   } animate-ping`}
                 ></div>
               </div>
 
               {/* Member Info */}
-              <div className="flex flex-col h-48 md:h-52 space-y-3">
+              <div className="flex flex-col h-44 md:h-48 lg:h-52 xl:h-48 space-y-2 lg:space-y-3">
                 {/* Name - Fixed height with first/last name on separate lines */}
-                <div className="h-16 flex items-center justify-center">
+                <div className="h-14 lg:h-16 flex items-center justify-center">
                   <h3
-                    className={`font-heading font-bold text-lg md:text-xl transition-colors duration-300 text-center leading-tight ${
+                    className={`font-heading font-bold text-base md:text-lg lg:text-lg xl:text-xl transition-colors duration-300 text-center leading-tight ${
                       member.isJoinCard
                         ? 'text-accent group-hover:text-accent'
                         : 'text-white group-hover:text-primary'
@@ -112,8 +112,8 @@ const Team = () => {
                 </div>
 
                 {/* Description - Flexible height */}
-                <div className="flex-1 flex items-start justify-center px-2">
-                  <p className="font-body text-muted-foreground text-xs md:text-sm leading-relaxed max-w-44 md:max-w-48 lg:max-w-52 mx-auto text-center">
+                <div className="flex-1 flex items-start justify-center px-1 lg:px-2">
+                  <p className="font-body text-muted-foreground text-xs md:text-sm lg:text-sm xl:text-sm leading-relaxed max-w-36 md:max-w-44 lg:max-w-40 xl:max-w-44 mx-auto text-center">
                     {member.description}
                   </p>
                 </div>
@@ -122,9 +122,14 @@ const Team = () => {
                 <div className="flex flex-col items-center gap-3 mt-auto">
                   {/* Join button for the join card */}
                   {member.isJoinCard && (
-                    <button className="btn-secondary-neon font-body text-xs px-4 py-1 transform hover:scale-105 transition-all duration-300 hover:cursor-pointer">
+                    <a
+                      href={member.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-secondary-neon font-body text-xs px-4 py-1 transform hover:scale-105 transition-all duration-300 hover:cursor-pointer inline-block text-center"
+                    >
                       Join Us
-                    </button>
+                    </a>
                   )}
 
                   {/* Social Links - Always at bottom */}
