@@ -7,7 +7,7 @@
  */
 
 // 🎯 CHANGE THIS VALUE TO TOGGLE EVENT STATE 🎯
-export const HAS_ACTIVE_EVENT = true;
+export const HAS_ACTIVE_EVENT = false;
 
 // ============================================================================
 // Event Content Configuration (No need to modify below this line)
