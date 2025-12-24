@@ -37,7 +37,7 @@ export const faqItems = [
   {
     question: 'Where exactly is the event located?',
     answer:
-      'BCIT Downtown Campus at 555 Seymour Street, Vancouver. We utilize a multi-level setup: Level 2 houses the main competition stage and audience seating, Level 5 contains the development workspace and sponsor workshops. The exclusive VIP after-party takes place on the AWS Building rooftop with stunning city views.',
+      'Science World at 100 Seymour Street, Vancouver. We utilize a multi-level setup: Level 2 houses the main competition stage and audience seating, Level 5 contains the development workspace and sponsor workshops. The exclusive VIP after-party takes place on the AWS Building rooftop with stunning city views.',
   },
   {
     question: 'How do tickets work and why do you charge?',

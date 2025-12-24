@@ -7,7 +7,7 @@
  */
 
 // 🎯 CHANGE THIS VALUE TO TOGGLE EVENT STATE 🎯
-export const HAS_ACTIVE_EVENT = false;
+export const HAS_ACTIVE_EVENT = true;
 
 // ============================================================================
 // Event Content Configuration (No need to modify below this line)
@@ -27,14 +27,14 @@ export const eventConfig = {
       emphasis: 'spectators',
     },
     event: {
-      date: 'October 25, 2025',
-      location: 'BCIT Downtown Campus • 10am-5pm',
-      afterParty: '+ VIP After Party @ AWS Building',
+      date: 'May 1, 2026',
+      location: 'Science World • 10am-5pm',
+      afterParty: '+ VIP After Party @ Science World',
       prize: '$1000 Cash Prize',
     },
     countdown: {
       title: 'Next Event Starts In',
-      targetDate: '2025-10-25T13:00:00',
+      targetDate: '2026-05-01T13:00:00',
       progressText: 'The countdown to innovation begins now',
     },
     registration: {
@@ -42,7 +42,7 @@ export const eventConfig = {
       title: 'Join the Battle',
       subtitle:
         'Ready to compete? Register your team and prepare for the ultimate hackathon showdown.',
-      buttonText: 'Register for AWS Day',
+      buttonText: 'Register for Cloud Summit',
     },
   },
 

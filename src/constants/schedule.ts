@@ -71,7 +71,7 @@ export const scheduleItems = [
   {
     time: '5:00 PM+',
     title: 'VIP After Party',
-    description: 'Exclusive rooftop celebration at AWS building',
+    description: 'Exclusive rooftop celebration at Science World',
     icon: Building,
     color: 'text-secondary',
     bgColor: 'bg-secondary/10',

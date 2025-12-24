@@ -3,19 +3,18 @@ import { CoffeeCup, Group, Trophy } from 'iconoir-react';
 export const venueContent = {
   header: {
     title: 'Venue & Location',
-    subtitle:
-      'BCIT Downtown Campus - A cutting-edge facility designed for innovation and collaboration',
+    subtitle: 'Science World - A cutting-edge facility designed for innovation and collaboration',
   },
   mainInfo: {
-    name: 'BCIT Downtown Campus',
+    name: 'Science World',
     address: {
-      street: '555 Seymour Street',
+      street: '100 Seymour Street',
       city: 'Vancouver, BC V6B 3H6',
     },
     event: {
-      date: 'Saturday, October 25th, 2025',
+      date: 'Friday, May 1st, 2026',
       time: '10:00 AM - 5:00 PM',
-      afterParty: 'AWS Building Rooftop (5:00 PM+)',
+      afterParty: 'Science World Rooftop (5:00 PM+)',
     },
     labels: {
       date: 'Date:',

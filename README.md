@@ -233,7 +233,7 @@ This project is part of the Hacker Rivals event series. All rights reserved.
 
 ## 🙏 Acknowledgments
 
-- **BCIT Downtown Campus** - Venue partner
+- **Science World** - Venue partner
 - **AWS** - Cloud infrastructure sponsor
 - **Couchbase** - Technology sponsor
 - **React Community** - Framework and ecosystem
