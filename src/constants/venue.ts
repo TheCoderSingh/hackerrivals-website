@@ -3,19 +3,18 @@ import { CoffeeCup, Group, Trophy } from 'iconoir-react';
 export const venueContent = {
   header: {
     title: 'Venue & Location',
-    subtitle:
-      'BCIT Downtown Campus - A cutting-edge facility designed for innovation and collaboration',
+    subtitle: 'Science World - A cutting-edge facility designed for innovation and collaboration',
   },
   mainInfo: {
-    name: 'BCIT Downtown Campus',
+    name: 'Science World',
     address: {
-      street: '555 Seymour Street',
-      city: 'Vancouver, BC V6B 3H6',
+      street: '1455 Quebec St',
+      city: 'Vancouver, BC V6A 3Z7',
     },
     event: {
-      date: 'Saturday, October 25th, 2025',
+      date: 'Friday, May 1st, 2026',
       time: '10:00 AM - 5:00 PM',
-      afterParty: 'AWS Building Rooftop (5:00 PM+)',
+      afterParty: 'Science World (5:00 PM+)',
     },
     labels: {
       date: 'Date:',
@@ -26,15 +25,16 @@ export const venueContent = {
       title: 'Getting There',
       transit: {
         title: 'Public Transit',
-        description: 'Granville SkyTrain Station (1 block), multiple bus routes on Seymour St',
+        description:
+          'Expo Line to Stadium-Chinatown Station (5-minute walk). Bus: Multiple routes stop within a 5-minute walk.',
       },
       parking: {
         title: 'Parking',
-        description: 'Street parking and nearby parkades available',
+        description: 'Paid street parking and nearby parkades available',
       },
       accessibility: {
         title: 'Accessibility',
-        description: 'Fully accessible facility with elevators and ramps',
+        description: 'Fully accessible venue with elevators and ramps',
       },
     },
   },

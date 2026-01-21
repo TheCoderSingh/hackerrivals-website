@@ -97,7 +97,7 @@ const Countdown = () => {
 
               {/* Content */}
               <div className="relative">
-                <div className="text-3xl md:text-4xl lg:text-5xl font-heading font-black text-glow mb-2">
+                <div className="text-3xl md:text-4xl lg:text-4xl font-heading font-black text-glow mb-2">
                   {unit.value.toString().padStart(2, '0')}
                 </div>
                 <div className="text-sm md:text-base font-body font-semibold text-muted-foreground uppercase tracking-wider">

@@ -11,10 +11,10 @@ export const registrationContent = {
     attendee: {
       title: 'Attendee Experience',
       description:
-        'Purchase a ticket to attend AWS Day and enjoy the conference experience. Watch the hackathon competition, network with professionals, and learn from industry experts.',
+        'Purchase a ticket to attend Cloud Summit and enjoy the conference experience. Watch the hackathon competition, network with professionals, and learn from industry experts.',
       button: 'Buy Attendee Ticket',
-      link: 'https://awsday.ca',
-      note: 'Visit www.awsday.ca to learn more about the conference that Hacker Rivals is part of.',
+      link: 'https://cloudsummit.ca',
+      note: 'Visit www.cloudsummit.ca to learn more about the conference that Hacker Rivals is part of.',
     },
     competitor: {
       title: 'Competitor Application',
@@ -25,19 +25,19 @@ export const registrationContent = {
       note: 'We will notify accepted competitors and send them instructions along with a free one-time ticket code for the event.',
     },
   },
-  awsDay: {
+  cloudSummit: {
     title: 'Ready to register?',
     description:
-      "Secure your spot by purchasing an AWS Day ticket on Luma. After your ticket is confirmed, we'll send you an email to finalize your Hacker Rivals registration.",
+      "Secure your spot by purchasing a Cloud Summit ticket on Luma. After your ticket is confirmed, we'll send you an email to finalize your Hacker Rivals registration.",
     steps: [
-      'Purchase an AWS Day ticket on Luma.',
+      'Purchase a Cloud Summit ticket on Luma.',
       'Check your inbox for the Hacker Rivals confirmation email.',
       'Follow the confirmation email to complete your team registration.',
     ],
     button: currentEvent.registration.buttonText,
     contact: 'Need help? Contact us',
     contactEmail: 'hello@hackerrivals.example',
-    note: 'Note: This event is part of AWS Day. Your Hacker Rivals registration will be confirmed after completing the AWS Day ticket purchase on Luma.',
+    note: 'Note: This event is part of Cloud Summit. Your Hacker Rivals registration will be confirmed after completing the Cloud Summit ticket purchase on Luma.',
   },
   form: {
     title: 'Apply to Compete',
